@@ -1,0 +1,49 @@
+/* fonts
+/Abel
+/Sue Ellen Francisco
+/Great Vibes
+/Amatic SC:400,700
+/Open Sans 
+/Condensed:300,300italic,700
+/Marmelad
+/Julius Sans One
+/Raleway:400,500,700,900
+/Chivo
+*/
+
+body {
+    font-family: 'Marmelad';
+    font-size: 16px; // 1em
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 4em; // 64px
+}
+
+h2 {
+    font-size: 3em; // 48px
+}
+
+h3 {
+    font-size: 2em; // 32px 
+}
+
+h4 {
+    font-size: 1.75em; // 28px
+}
+
+h5 {
+    font-size: 1.5em;  // 24px
+}
+
+p, span {
+    font-size: 1em;   
+}
+
+bold {
+    font-weight: bold;
+}
