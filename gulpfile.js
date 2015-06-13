@@ -21,7 +21,8 @@ gulp.task('compass', function() {
       css: 'css',
       sass: 'sass'
     }))
-    .pipe(gulp.dest('app/assets/temp'));
+    .pipe(gulp.dest('app/assets/temp'))
+    .pipe(autoprefixer('last 2 version'));
 });
 
 gulp.task('webserver', function() {

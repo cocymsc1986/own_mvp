@@ -1,0 +1,27 @@
+nav {
+    min-height: 50px;
+    
+    ul {
+        li {
+            @include span(3 of 12);
+            display: inline;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #dd7813;
+
+            &:nth-child(2) {
+                color: #bf2926;    
+            }
+
+            &:nth-child(3) {
+                color: #705bd6;  
+            }
+
+            &:last-child {
+                @include span(3 of 12 last);
+                color: #3de652;
+            }
+        }
+    }
+}

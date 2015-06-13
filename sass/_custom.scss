@@ -1,0 +1,51 @@
+section {
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: 100%;
+    
+    &.one {
+        background-image: url();
+        text-align: center;
+        
+        .welcome-text-container {
+            margin-top: -14%;
+            z-index: 1;
+        }
+        
+        .me {
+            position: relative;
+            width: 35%;
+            margin: 5% auto;
+            -webkit-clip-path: circle(50% at 50% 50%);
+            z-index: -1;
+        }
+    }
+    
+    &.two {
+        background-image: url('../assets/images/amends/9.jpg');
+        //-webkit-filter: brightness(50%);
+    }
+    
+    &.three {
+        
+    }
+    
+    &.four {
+        background-image: url('../assets/images/amends/4.jpg');
+        //-webkit-filter: brightness(50%);
+    }
+    
+    &.five {
+        
+    }
+    
+    &.six {
+        background-image: url('../assets/images/desktop.JPG');
+        //-webkit-filter: brightness(50%);
+    }
+    
+    &.seven {
+        
+    }
+}
+

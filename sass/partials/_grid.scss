@@ -1,3 +1,19 @@
+@import "susy";
+
+// breakpoints
+// 960 - desktop
+// 767 - tablet
+// 640 - small tablet
+// 480 - phone
+
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: after   
+);
+
 body {
     margin: 0;   
 }

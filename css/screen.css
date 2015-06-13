@@ -14,20 +14,8 @@ body {
   margin: 0;
 }
 
-/* fonts
-/Abel
-/Sue Ellen Francisco
-/Great Vibes
-/Amatic SC:400,700
-/Open Sans 
-/Condensed:300,300italic,700
-/Marmelad
-/Julius Sans One
-/Raleway:400,500,700,900
-/Chivo
-*/
 body {
-  font-family: 'Marmelad';
+  font-family: 'Source Sans Pro';
   font-size: 16px;
 }
 
@@ -63,54 +51,58 @@ bold {
   font-weight: bold;
 }
 
+nav {
+  min-height: 50px;
+}
+nav ul li {
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #dd7813;
+}
+nav ul li:nth-child(2) {
+  color: #bf2926;
+}
+nav ul li:nth-child(3) {
+  color: #705bd6;
+}
+nav ul li:last-child {
+  width: 23.72881%;
+  float: right;
+  margin-right: 0;
+  color: #3de652;
+}
+
 section {
-  height: 110vh;
-  text-align: center;
-}
-section:first-child {
   height: 100vh;
+  background-attachment: fixed;
+  background-size: 100%;
 }
-section h1, section h2 {
-  text-align: center;
-  margin: 0;
-}
-
-section:nth-of-type(odd) {
-  background: #f0e8fa;
-  color: #4e2287;
-}
-
-.section-header {
-  background: #4e2287;
-  color: white;
-  padding: 8em 2em;
+section.one {
+  background-image: url();
   text-align: center;
 }
-.section-header.two {
-  font-family: 'Great Vibes';
+section.one .welcome-text-container {
+  margin-top: -14%;
+  z-index: 1;
 }
-
-section#one svg {
-  -webkit-transition: all 1s ease;
-  /* Safari and Chrome */
-  /* Firefox */
-  /* IE 9 */
-  /* Opera */
-  transition: all 1s ease;
+section.one .me {
+  position: relative;
+  width: 35%;
+  margin: 5% auto;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  z-index: -1;
 }
-section#one svg:hover {
-  -webkit-transform: scale(1.2);
-  /* Safari and Chrome */
-  /* Firefox */
-  -ms-transform: scale(1.2);
-  /* IE 9 */
-  /* Opera */
-  transform: scale(1.2);
+section.two {
+  background-image: url("../assets/images/amends/9.jpg");
 }
-section#two h1 {
-  color: #4e2287;
+section.four {
+  background-image: url("../assets/images/amends/4.jpg");
 }
-section#three h1 {
-  color: #4e2287;
-  margin: 1em 0;
+section.six {
+  background-image: url("../assets/images/desktop.JPG");
 }
