@@ -14,6 +14,15 @@ body {
   margin: 0;
 }
 
+.clearfix, section.two, section.four, section.five {
+  overflow: auto;
+  clear: both;
+}
+
+.section-inner {
+  max-width: 1280px;
+}
+
 body {
   font-family: 'Source Sans Pro';
   font-size: 16px;
@@ -81,28 +90,81 @@ section {
   height: 100vh;
   background-attachment: fixed;
   background-size: 100%;
+  text-align: center;
+}
+section h2 {
+  margin: 0.5em 0 0.75em;
 }
 section.one {
   background-image: url();
   text-align: center;
 }
 section.one .welcome-text-container {
-  margin-top: -14%;
+  color: #0c0821;
   z-index: 1;
 }
 section.one .me {
   position: relative;
-  width: 35%;
+  width: 25%;
   margin: 5% auto;
   -webkit-clip-path: circle(50% at 50% 50%);
   z-index: -1;
 }
 section.two {
+  background: #0c0821;
+  height: auto;
+  padding: 2em 0;
+  color: white;
+}
+section.two .skill {
+  width: 33%;
+  float: left;
+}
+section.two .skill svg {
+  width: 100%;
+}
+section.three {
   background-image: url("../assets/images/amends/9.jpg");
 }
 section.four {
-  background-image: url("../assets/images/amends/4.jpg");
+  height: auto;
+  padding: 2em 0;
+  background: #f0e8fa;
 }
-section.six {
-  background-image: url("../assets/images/desktop.JPG");
+section.four .work-container {
+  width: 33%;
+  float: left;
+}
+section.four .work-container .work-example {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 10px solid #0c0821;
+  margin: 2em auto;
+}
+section.four .work-container .work-example.barnet {
+  background-image: url("../assets/images/barnet_thumb.png");
+}
+section.four .work-container .work-example.tesco {
+  background-image: url("../assets/images/tesco_thumb.png");
+}
+section.four .work-container .work-example.reed {
+  background-image: url("../assets/images/reed_salary_thumb.png");
+}
+section.four .work-container .work-example.alessio {
+  background-image: url("../assets/images/alessios_thumb.png");
+}
+section.four .work-container .work-example.rac {
+  background-image: url("../assets/images/rac_thumb.png");
+}
+section.four .work-container .work-example.connect {
+  background-image: url("../assets/images/connect_thumb.png");
+}
+section.five {
+  height: auto;
+  background: #0c0821;
+}
+section.five img {
+  width: 100px;
+  float: left;
 }

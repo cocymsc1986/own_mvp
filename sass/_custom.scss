@@ -2,46 +2,112 @@ section {
     height: 100vh;
     background-attachment: fixed;
     background-size: 100%;
+    text-align: center;
+    
+    h2 {
+        margin: 0.5em 0 0.75em;   
+    }
     
     &.one {
         background-image: url();
         text-align: center;
         
+        
         .welcome-text-container {
-            margin-top: -14%;
+            color: $primary;
             z-index: 1;
         }
         
         .me {
             position: relative;
-            width: 35%;
+            width: 25%;
             margin: 5% auto;
             -webkit-clip-path: circle(50% at 50% 50%);
             z-index: -1;
         }
+        
+        
     }
     
     &.two {
-        background-image: url('../assets/images/amends/9.jpg');
-        //-webkit-filter: brightness(50%);
+        @extend .clearfix;
+        
+        background: $primary;
+        height: auto;
+        padding: 2em 0;
+        color: $white;
+        
+        .skill {
+            width: 33%;
+            float: left;
+            
+            svg {
+                width: 100%;
+            }   
+        }
     }
     
     &.three {
-        
+        background-image: url('../assets/images/amends/9.jpg');
     }
     
     &.four {
-        background-image: url('../assets/images/amends/4.jpg');
-        //-webkit-filter: brightness(50%);
+        @extend .clearfix;
+        height: auto;
+        padding: 2em 0;
+        background: $light-purple;
+        
+        .work-container {
+            width: 33%;
+            float: left;
+        
+            .work-example {
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                border: 10px solid $primary;
+                margin: 2em auto;
+
+                &.barnet {
+                    background-image: url('../assets/images/barnet_thumb.png');
+                }
+
+                &.tesco {
+                    background-image: url('../assets/images/tesco_thumb.png');
+                }
+
+                &.reed {
+                    background-image: url('../assets/images/reed_salary_thumb.png');
+                }
+
+                &.alessio {
+                    background-image: url('../assets/images/alessios_thumb.png');
+                }
+
+                &.rac {
+                    background-image: url('../assets/images/rac_thumb.png');
+                }
+
+                &.connect {
+                    background-image: url('../assets/images/connect_thumb.png');
+                }
+            }
+        }
     }
     
     &.five {
+        @extend .clearfix;
+        height: auto;
+        background: $primary;
         
+        img {
+            width: 100px;
+            float: left;
+        }
     }
     
     &.six {
-        background-image: url('../assets/images/desktop.JPG');
-        //-webkit-filter: brightness(50%);
+        
     }
     
     &.seven {

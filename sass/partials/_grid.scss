@@ -15,5 +15,14 @@ $susy: (
 );
 
 body {
-    margin: 0;   
+    margin: 0;
+}
+
+.clearfix {
+    overflow: auto;
+    clear: both;
+}
+
+.section-inner {
+    max-width: 1280px;   
 }
