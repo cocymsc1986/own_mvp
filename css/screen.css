@@ -60,8 +60,227 @@ bold {
   font-weight: bold;
 }
 
+@font-face {
+  font-family: "Flaticon";
+  src: url("../../assets/icons/iconfont/flaticon.eot");
+  src: url("../../assets/icons/iconfont/flaticon.eot#iefix") format("embedded-opentype"), url("../../assets/icons/iconfont/flaticon.woff") format("woff"), url("../../assets/icons/iconfont/flaticon.ttf") format("truetype"), url("../../assets/icons/iconfont/flaticon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-family: Flaticon;
+  font-size: 20px;
+  font-style: normal;
+  margin-left: 20px;
+}
+
+.flaticon-check52:before {
+  content: "\e000";
+}
+
+.flaticon-cross97:before {
+  content: "\e001";
+}
+
+.flaticon-envelope54:before {
+  content: "\e002";
+}
+
+.flaticon-instagram19:before {
+  content: "\e003";
+}
+
+.flaticon-linkedin:before {
+  content: "\e004";
+}
+
+.flaticon-magnifying47:before {
+  content: "\e005";
+}
+
+.flaticon-menu55:before {
+  content: "\e006";
+}
+
+.flaticon-opened4:before {
+  content: "\e007";
+}
+
+.flaticon-plus79:before {
+  content: "\e008";
+}
+
+.flaticon-social16:before {
+  content: "\e009";
+}
+
+.flaticon-twitter:before {
+  content: "\e00a";
+}
+
+.social-menu-container {
+  position: fixed;
+  bottom: 15px;
+  right: -45px;
+  z-index: 999;
+  transition: right 0.5s ease-out;
+}
+.social-menu-container.hide {
+  right: -200px;
+  transition: right 0.5s ease-in;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0;
+  }
+}
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: black;
+  }
+}
+@-moz-keyframes typing {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0;
+  }
+}
+@-moz-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: black;
+  }
+}
+.skill.played path {
+  animation: draw 1s linear forwards;
+}
+.skill.played h3 {
+  opacity: 1 !important;
+  transition: opacity 1.5s linear;
+}
+
+@-webkit-keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.menu {
+  width: 300px;
+  height: 200px;
+  margin: 0 auto 60px;
+  position: relative;
+  -webkit-filter: url("#goo");
+  filter: url("../menu.html#goo");
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.menu-wrapper {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+}
+
+.menu-toggle-button,
+.menu-item-bounce,
+.menu-item-button {
+  background: #00b8a5;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  margin-left: -45px;
+  margin-top: -45px;
+  height: 90px;
+  color: #fff;
+  border: none;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-toggle-button {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.menu-toggle-icon {
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+}
+
+.menu-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.menu-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+}
+
+.menu-item-bounce {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.menu-item-button {
+  width: 60px;
+  height: 60px;
+  margin-left: -30px;
+  margin-top: -30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #00b8a5;
+}
+
+.menu-item-button:hover {
+  color: #fff;
+}
+
 nav {
   min-height: 50px;
+  padding-top: 1em;
+  background: #f0e8fa;
+}
+nav ul {
+  margin: 0;
 }
 nav ul li {
   width: 23.72881%;
@@ -71,26 +290,26 @@ nav ul li {
   text-align: center;
   font-weight: bold;
   font-size: 1.2em;
-  color: #dd7813;
-}
-nav ul li:nth-child(2) {
-  color: #bf2926;
-}
-nav ul li:nth-child(3) {
-  color: #705bd6;
+  color: #00b8a5;
 }
 nav ul li:last-child {
   width: 23.72881%;
   float: right;
   margin-right: 0;
-  color: #3de652;
+}
+
+.social-menu-container .menu-toggle-button i:before {
+  font-size: 30px !important;
+  margin-left: 0 !important;
 }
 
 section {
   height: 100vh;
+  min-height: 600px;
   background-attachment: fixed;
   background-size: 100%;
   text-align: center;
+  background-color: #f0e8fa;
 }
 section h2 {
   margin: 0.5em 0 0.75em;
@@ -108,7 +327,6 @@ section.one .me {
   width: 25%;
   margin: 5% auto;
   -webkit-clip-path: circle(50% at 50% 50%);
-  z-index: -1;
 }
 section.two {
   background: #0c0821;
@@ -123,6 +341,22 @@ section.two .skill {
 section.two .skill svg {
   width: 100%;
 }
+section.two .skill h3 i {
+  display: inline-block;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background: #00b8a5;
+  color: white;
+  vertical-align: middle;
+  margin-left: 7px;
+  box-shadow: 2px 2px 5px #060410;
+  line-height: 19px;
+}
+section.two .skill h3 i:before {
+  font-size: 15px;
+  margin-left: 1px;
+}
 section.three {
   background-image: url("../assets/images/amends/9.jpg");
 }
@@ -136,11 +370,12 @@ section.four .work-container {
   float: left;
 }
 section.four .work-container .work-example {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
-  border: 10px solid #0c0821;
+  border: 8px solid #0c0821;
   margin: 2em auto;
+  background-color: #00b8a5;
 }
 section.four .work-container .work-example.barnet {
   background-image: url("../assets/images/barnet_thumb.png");
@@ -160,11 +395,27 @@ section.four .work-container .work-example.rac {
 section.four .work-container .work-example.connect {
   background-image: url("../assets/images/connect_thumb.png");
 }
+section.four .work-container .work-example:hover {
+  filter: brightness(70%);
+}
 section.five {
   height: auto;
+  color: white;
+  padding: 2em 0;
   background: #0c0821;
 }
 section.five img {
-  width: 100px;
-  float: left;
+  height: 75px;
+  text-align: center;
+  margin: 2em 4em;
+}
+section.six h2 {
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+.filter {
+  position: absolute;
+  left: -999999px;
+  top: -999999px;
 }

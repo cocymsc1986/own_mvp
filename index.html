@@ -25,9 +25,47 @@
         <script src="js/vendor/modernizr/modernizr.custom.min.js"></script>
     </head>
     <body>
+        <svg class="filter" xmlns="http://www.w3.org/2000/svg" version="1.1">
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+              <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+            </filter>
+          </defs>
+        </svg>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div class="social-menu-container">
+            <div class="menu">
+                <div class="menu-wrapper">
+                    <ul class="menu-items">
+                        <li class="menu-item">
+                            <button class="menu-item-button">
+                                <i class="menu-item-icon"></i>
+                            </button>
+                            <div class="menu-item-bounce"></div>
+                        </li>
+                        <li class="menu-item">
+                            <button class="menu-item-button">
+                                <i class="menu-item-icon icon icon-box"></i>
+                            </button>
+                            <div class="menu-item-bounce"></div>
+                        </li>
+                        <li class="menu-item">
+                            <button class="menu-item-button">
+                                <i class="menu-item-icon icon icon-trash"></i>
+                            </button>
+                            <div class="menu-item-bounce"></div>
+                        </li>
+                    </ul>
+                    <button class="menu-toggle-button">
+                        <i class="fa fa-plus menu-toggle-icon flaticon-plus79"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
         <nav>
             <div class="section-inner">
                 <ul>
@@ -45,7 +83,7 @@
                     <div class="welcome-container">
                         <img class="me" src="assets/images/profile.jpg" alt="me">
                         <div class="welcome-text-container">
-                            <h1>Hi, I'm Michael.</h1>
+                            <h1>Hello, I'm Michael.</h1>
                         </div>
                     </div>
                 </div>
@@ -59,7 +97,7 @@
                         <!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                         <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                             width="600px" height="600px" viewBox="0 0 600 600" enable-background="new 0 0 600 600" xml:space="preserve">
+                             width="300px" height="300px" viewBox="0 0 600 600" enable-background="new 0 0 300 300" xml:space="preserve">
                             <path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" d="M383.5,183.039c32.9,0,75.815,0,99.5,0
                                 c13.5,0,22.449,9.326,22.449,20.96c0,53.5,0,160.5,0,214c0,13.168-9.418,23.203-22.449,23.203c-39.535,0-157.143,0-157.143,0v15.306
                                 c0,0,46.893,0,62.244,0c2.552,0,2.551,10.204,0,10.204c-24.352,0-133.352,0-164.408,0c-2.545,0-2.545-10.184,0-10.184
@@ -83,13 +121,15 @@
                             <path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" d="M278.667,290L404,89.333c0,0,19.393-1.189,25,3
                                 C433.943,96.026,439,113,439,113L292.334,300.666L278.667,290z"/>
                         </svg>
+                        
+                        <h3>ux &amp; design <i class="more flaticon-plus79"></i></h3>
                     </div>
                     <div class="sketch skill draw">
                         <?xml version="1.0" encoding="utf-8"?>
                         <!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                         <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                             width="600px" height="600px" viewBox="0 0 600 600" enable-background="new 0 0 600 600" xml:space="preserve">
+                             width="300px" height="300px" viewBox="0 0 600 600" enable-background="new 0 0 300 300" xml:space="preserve">
                             <path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" d="M343.675,242.68l88.909,113.406L265.592,468.081
                                 L133.599,289.59l163.319-106.55l33.476,43.32"/>
                             <path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" d="M268.226,200.54
@@ -116,13 +156,15 @@
                             <path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" d="M432.584,363.333L265,476L134.599,300"/>
                             <path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" d="M432.084,370.333L264.5,484L134.1,308"/>
                         </svg>
+                        
+                        <h3>sketch <i class="more flaticon-plus79"></i></h3>
                     </div>
                     <div class="code skill draw">
                         <?xml version="1.0" encoding="utf-8"?>
                         <!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                         <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                             width="600px" height="600px" viewBox="0 0 600 600" enable-background="new 0 0 600 600" xml:space="preserve">
+                             width="300px" height="300px" viewBox="0 0 600 600" enable-background="new 0 0 300 300" xml:space="preserve">
                             <path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" d="M266.44,438.697c0,0-103.303-0.018-150.038-0.018
                                 c-11.173,0-20.568-12.466-20.568-26.606c0-58.527,0-174.941,0-234.11c0-13.886,10.86-23.037,20.57-23.037
                                 c98.919,0,264.528,0,365.371,0c14.838,0,24.674,10.25,24.674,23.038c0,58.802,0,176.406,0,235.208
@@ -140,10 +182,12 @@
                                 l67.036,64.481l-67.674,64.27"/>
                             <path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="10" stroke-miterlimit="10" d="M267.563,373.25l63.418-128.751"/>
                         </svg>
+                        
+                        <h3>code <i class="more flaticon-plus79"></i></h3>
                     </div>
                 </div>
             </section>
-            <section class="three">
+            <section class="three image">
                 <!-- image -->
                 
 <!--                <h2>Sketching is the best way to communicate ideas</h2>-->
@@ -155,30 +199,37 @@
                     <article class="work-example barnet">
 
                     </article>
+                    <span class="client-logo"></span>
                 </div>
                 <div class="work-container">
                     <article class="work-example tesco">
                     </article>
+                    <span class="client-logo"></span>
                 </div>
                 <div class="work-container">
                     <article class="work-example reed">
                     </article>
+                    <span class="client-logo"></span>
                 </div>
                 <div class="work-container">
                     <article class="work-example alessio">
                     </article>
+                    <span class="client-logo"></span>
                 </div>
                 <div class="work-container">
                     <article class="work-example rac">
                     </article>
+                    <span class="client-logo"></span>
                 </div>
                 <div class="work-container">
                     <article class="work-example connect">
                     </article>
+                    <span class="client-logo"></span>
                 </div>
             </section>
-            <section class="five">
+            <section class="five software">
                 <!-- software -->
+                <h2>...using this kinda stuff...</h2>
                 <img src="assets/images/software_logos/white_axure.png" alt="axure">
                 <img src="assets/images/software_logos/white_css.png" alt="css">
                 <img src="assets/images/software_logos/white_git.png" alt="git">
@@ -190,14 +241,19 @@
             </section>
             <section class="six">
                 <!-- get in touch -->
+                <h2>Want to know more?</h2>
+                
+                <footer>
+            
+                </footer>
             </section>
         </main>
         
-        <footer>
-            
-        </footer>
-
+        <div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>, <a            href="http://www.flaticon.com/authors/ocha" title="OCHA">OCHA</a>, <a href="http://www.flaticon.com/authors/balraj-chana" title="Balraj Chana">Balraj Chana</a>, <a href="http://www.flaticon.com/authors/google" title="Google">Google</a>, <a href="http://www.flaticon.com/authors/bogdan-rosu" title="Bogdan Rosu">Bogdan Rosu</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+        
         <script src="js/vendor/jquery/jquery-2.1.1.min.js"></script>
-        <script src="js/init/init.js"></script>
+        <script src="js/vendor/GSAP/TweenMax.min.js"></script>
+        <script src="js/animation.js"></script>
+<!--        <script src="js/compressed/main.js"></script>-->
     </body>
 </html>

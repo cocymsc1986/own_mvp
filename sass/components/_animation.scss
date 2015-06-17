@@ -1,0 +1,55 @@
+// animation related css that can be separated
+// blob
+
+.social-menu-container {
+    position: fixed;
+    bottom: 15px;
+    right: -45px;
+    z-index: 999;
+    transition: right 0.5s ease-out;
+    
+    &.hide {
+        right: -200px;
+        transition: right 0.5s ease-in;
+    }
+}
+
+// typing effect... Thanks to Lea Verou http://lea.verou.me/2011/09/pure-css3-typing-animation-with-steps/
+@-webkit-keyframes typing {
+    from { width: 100% }
+    to { width: 0 }
+}
+
+@-webkit-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+
+@-moz-keyframes typing {
+    from { width: 100% }
+    to { width: 0 }
+}
+
+@-moz-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+
+.skill.played {
+    path {
+        animation: draw 1s linear forwards;
+    }
+    
+    h3 {
+        opacity: 1 !important;
+        transition: opacity 1.5s linear;
+    }
+}
+
+@-webkit-keyframes draw {
+    to { stroke-dashoffset: 0 }
+}
+
+@-moz-keyframes draw {
+    to { stroke-dashoffset: 0 }
+}

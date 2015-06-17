@@ -47,8 +47,8 @@ gulp.task('webserver', function() {
 
 gulp.task('scripts', function() {
   return gulp.src('js/**/*.js')
-    .pipe(jshint('node_modules/gulp-jshint/.jshintrc'))
-    .pipe(jshint.reporter('default'))
+//    .pipe(jshint('node_modules/gulp-jshint/.jshintrc'))
+//    .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
     .pipe(gulp.dest('js/compressed'))
     .pipe(rename({suffix: '.min'}))
@@ -72,6 +72,10 @@ gulp.task('watchstyles', function() {
     gulp.watch('sass/**/*.scss', ['compass'] );
 })
 
+gulp.task('watchscripts', function() {
+    gulp.watch('js/**/*.js', ['scripts'] );
+})
+
 gulp.task('watch', function() {
 
   // Watch .scss files
@@ -82,11 +86,4 @@ gulp.task('watch', function() {
 
   // Watch image files
   gulp.watch('assets/images/uncompressed/*', ['images']);
-    
-  // Create LiveReload server
-  livereload.listen();
-
-  // Watch any files in dist/, reload on change
-  gulp.watch(['css/**']).on('change', livereload.changed);
-
 });

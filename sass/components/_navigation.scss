@@ -1,27 +1,41 @@
 nav {
     min-height: 50px;
+    padding-top: 1em;
+    background: $light-purple;
     
     ul {
+        margin: 0;
+        
         li {
             @include span(3 of 12);
             display: inline;
             text-align: center;
             font-weight: bold;
             font-size: 1.2em;
-            color: #dd7813;
+            color: $accent;
 
-            &:nth-child(2) {
-                color: #bf2926;    
-            }
-
-            &:nth-child(3) {
-                color: #705bd6;  
-            }
+//            &:nth-child(2) {
+//                color: #bf2926;    
+//            }
+//
+//            &:nth-child(3) {
+//                color: #705bd6;  
+//            }
 
             &:last-child {
                 @include span(3 of 12 last);
-                color: #3de652;
+                //color: #3de652;
             }
         }
     }
 }
+
+.social-menu-container {
+    .menu-toggle-button {
+        i:before {
+            font-size: 30px !important;
+            margin-left: 0 !important;
+        
+        }
+    }
+}   
