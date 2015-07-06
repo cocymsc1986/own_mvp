@@ -10,25 +10,21 @@ h1, h2, h3, h4, h5, p {
   margin: 0;
 }
 
-body {
-  margin: 0;
+a {
+  text-decoration: none;
+  color: inherit;
 }
-
-.clearfix, section.two, section.four, section.five {
-  overflow: auto;
-  clear: both;
-}
-
-.section-inner {
-  max-width: 1280px;
+a:visited {
+  color: inherit;
 }
 
 body {
-  font-family: 'Source Sans Pro';
+  font-family: "Roboto", "Source Sans Pro";
   font-size: 16px;
 }
 
 h1, h2, h3, h4, h5 {
+  font-family: "Open Sans";
   font-weight: 700;
 }
 
@@ -58,6 +54,32 @@ p, span {
 
 bold {
   font-weight: bold;
+}
+
+button.primary {
+  font-family: "Roboto", "Source Sans Pro";
+  background: #00bcd4;
+  padding: 1em;
+  border: none;
+  color: white;
+  font-size: 1.25em;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #d5bef1;
+}
+
+body {
+  margin: 0;
+}
+
+.clearfix, section.two, section.four, section.five, section.contact .social {
+  overflow: auto;
+  clear: both;
+}
+
+.section-inner {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 @font-face {
@@ -115,10 +137,32 @@ bold {
   content: "\e009";
 }
 
-.flaticon-twitter:before {
+.flaticon-telephone46:before {
   content: "\e00a";
 }
 
+.flaticon-twitter:before {
+  content: "\e00b";
+}
+
+.flaticon-twitter1:before {
+  content: "\e00c";
+}
+
+.loader circle {
+  stroke-dasharray: 315;
+  stroke-dashoffset: 630;
+  transform-origin: center;
+  animation: loader 2s linear infinite;
+}
+
+@-webkit-keyframes loader {
+  to {
+    stroke-dashoffset: 0;
+    transform: rotate(360deg);
+    transform-origin: center;
+  }
+}
 .social-menu-container {
   position: fixed;
   bottom: 15px;
@@ -129,6 +173,10 @@ bold {
 .social-menu-container.hide {
   right: -200px;
   transition: right 0.5s ease-in;
+}
+.social-menu-container .menu-toggle-button:hover i {
+  color: #a1f4ff;
+  transition: color 0.1s linear;
 }
 
 @-webkit-keyframes typing {
@@ -205,13 +253,13 @@ bold {
 .menu-toggle-button,
 .menu-item-bounce,
 .menu-item-button {
-  background: #00b8a5;
+  background: #00bcd4;
   border-radius: 50%;
-  width: 90px;
-  height: 90px;
-  margin-left: -45px;
-  margin-top: -45px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
+  margin-top: -40px;
+  height: 80px;
   color: #fff;
   border: none;
   outline: none;
@@ -231,9 +279,9 @@ bold {
   position: absolute;
   top: 0;
   left: 0;
-  width: 90px;
-  height: 90px;
-  line-height: 90px;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
 }
 
 .menu-items {
@@ -267,7 +315,7 @@ bold {
   position: absolute;
   top: 0;
   left: 0;
-  color: #00b8a5;
+  color: #00bcd4;
 }
 
 .menu-item-button:hover {
@@ -281,6 +329,7 @@ nav {
 }
 nav ul {
   margin: 0;
+  padding-top: 5px;
 }
 nav ul li {
   width: 23.72881%;
@@ -290,21 +339,57 @@ nav ul li {
   text-align: center;
   font-weight: bold;
   font-size: 1.2em;
-  color: #00b8a5;
+  color: #00bcd4;
 }
 nav ul li:last-child {
   width: 23.72881%;
   float: right;
   margin-right: 0;
 }
+nav ul li a {
+  font-size: 1em;
+  transition: all 0.1s ease-out;
+}
+nav ul li a:hover {
+  color: #23143e;
+  font-size: 1.2em;
+  transition: all 0.1s ease-out;
+}
 
 .social-menu-container .menu-toggle-button i:before {
   font-size: 30px !important;
   margin-left: 0 !important;
 }
+.social-menu-container i.menu-item-icon img {
+  margin-bottom: -2px;
+  margin-left: -1px;
+}
+.social-menu-container i.menu-item-icon.instagram img {
+  transform: rotate(-80deg);
+}
+.social-menu-container i.menu-item-icon.twitter img {
+  transform: rotate(-140deg);
+}
+.social-menu-container i.menu-item-icon.linkedin img {
+  transform: rotate(-200deg);
+}
+
+.hidden {
+  display: none;
+}
+
+body.js * {
+  visibility: hidden;
+}
+
+.loader {
+  visibility: visible !important;
+  margin: 200px auto 0;
+}
 
 section {
   height: 100vh;
+  max-height: 1000px;
   min-height: 600px;
   background-attachment: fixed;
   background-size: 100%;
@@ -319,7 +404,7 @@ section.one {
   text-align: center;
 }
 section.one .welcome-text-container {
-  color: #0c0821;
+  color: #23143e;
   z-index: 1;
 }
 section.one .me {
@@ -329,10 +414,11 @@ section.one .me {
   -webkit-clip-path: circle(50% at 50% 50%);
 }
 section.two {
-  background: #0c0821;
+  background: #23143e;
   height: auto;
   padding: 2em 0;
   color: white;
+  overflow: hidden;
 }
 section.two .skill {
   width: 33%;
@@ -341,28 +427,71 @@ section.two .skill {
 section.two .skill svg {
   width: 100%;
 }
-section.two .skill h3 i {
-  display: inline-block;
-  border-radius: 50%;
+section.two .skill:first-child {
+  margin-left: 7px;
+}
+section.two .skill h3 i.more {
+  display: block;
+  border-radius: 15px;
   height: 30px;
   width: 30px;
-  background: #00b8a5;
+  background: #00bcd4;
   color: white;
   vertical-align: middle;
-  margin-left: 7px;
+  margin: 0 auto;
   box-shadow: 2px 2px 5px #060410;
   line-height: 19px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
 }
-section.two .skill h3 i:before {
+section.two .skill h3 i.more:before {
   font-size: 15px;
-  margin-left: 1px;
+  margin-left: 8px;
+  opacity: 1;
+  transition: all 0.75s ease-out;
+}
+section.two .skill h3 i.more:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-out;
+  box-shadow: 3px 3px 3px #0d0817;
+}
+section.two .skill h3 i.more span {
+  height: 0;
+  font-size: 0.75em;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 26px;
+  padding: 0.75em;
+  text-align: left;
+  opacity: 0;
+  transition: all 0s linear;
+}
+section.two .skill h3 i.more.open {
+  height: 320px;
+  width: 300px;
+  transition: all 0.2s ease-out;
+}
+section.two .skill h3 i.more.open:hover {
+  transform: scale(1);
+}
+section.two .skill h3 i.more.open:before {
+  height: 0;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+section.two .skill h3 i.more.open span {
+  display: inline-block;
+  margin-top: -15px;
+  opacity: 1;
+  transition: all 0.7s ease-in;
 }
 section.three {
   background-image: url("../assets/images/amends/9.jpg");
 }
 section.four {
   height: auto;
-  padding: 2em 0;
+  padding: 2em 0 5em;
+  color: #23143e;
   background: #f0e8fa;
 }
 section.four .work-container {
@@ -370,12 +499,13 @@ section.four .work-container {
   float: left;
 }
 section.four .work-container .work-example {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  border: 8px solid #0c0821;
+  border: 6px solid #23143e;
   margin: 2em auto;
-  background-color: #00b8a5;
+  background-color: #23143e;
+  cursor: pointer;
 }
 section.four .work-container .work-example.barnet {
   background-image: url("../assets/images/barnet_thumb.png");
@@ -395,23 +525,141 @@ section.four .work-container .work-example.rac {
 section.four .work-container .work-example.connect {
   background-image: url("../assets/images/connect_thumb.png");
 }
+section.four .work-container .work-example .client-logo {
+  opacity: 0;
+  width: 80%;
+  transform: translate(0%, 73%);
+  transition: opacity 0.5s linear;
+}
 section.four .work-container .work-example:hover {
-  filter: brightness(70%);
+  background: #23143e;
+}
+section.four .work-container .work-example:hover .client-logo {
+  opacity: 1;
+  transition: opacity 0.5s linear;
 }
 section.five {
   height: auto;
   color: white;
   padding: 2em 0;
-  background: #0c0821;
+  background: #23143e;
 }
 section.five img {
   height: 75px;
   text-align: center;
-  margin: 2em 4em;
+  margin: 4em 4em;
 }
-section.six h2 {
-  margin: 0;
-  padding: 0.5em 0;
+section.contact {
+  padding: 2em;
+  color: #23143e;
+}
+section.contact .social {
+  margin: 4em auto;
+}
+section.contact .social div {
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+}
+section.contact .social div:last-child {
+  width: 32.20339%;
+  float: right;
+  margin-right: 0;
+}
+section.contact .social div i:before {
+  font-size: 10em;
+  color: #23143e;
+  transition: color 0.1s linear;
+}
+section.contact .social div a:hover i:before {
+  color: #00bcd4;
+  transition: color 0.1s linear;
+}
+section.contact button {
+  margin-bottom: 2em;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+section.contact button:hover {
+  transform: scale(1.1);
+  box-shadow: 4px 4px 4px #ccc;
+  transition: all 0.2s ease-out;
+}
+section.contact button:active {
+  transform: scale(1.05);
+  transition: all 0.05s ease-out;
+  background: #008fa1;
+}
+section.contact .email, section.contact .telephone, section.contact .twitter {
+  display: inline-block;
+  margin: 1em;
+  color: #23143e;
+}
+section.contact .email i, section.contact .telephone i, section.contact .twitter i {
+  margin-right: 1em;
+}
+section.contact .email i:before, section.contact .telephone i:before, section.contact .twitter i:before {
+  font-size: 1.7em;
+}
+section.contact .email span, section.contact .telephone span, section.contact .twitter span {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.footer {
+  color: white;
+  padding: 1em;
+  background: #23143e;
+}
+
+.portfolio section:not(.contact) {
+  text-align: left;
+  padding: 4em 2em 1em;
+  max-height: 800px;
+}
+.portfolio section:not(.contact).portfolio-intro {
+  padding-bottom: 0;
+}
+.portfolio section:not(.contact).portfolio-intro .portfolio-head {
+  width: 100%;
+}
+.portfolio section:not(.contact) .work-description {
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+}
+.portfolio section:not(.contact) .work-description h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.portfolio section:not(.contact) img.portfolio-example {
+  width: 57.62712%;
+  float: right;
+  margin-right: 0;
+  border-radius: 3px;
+}
+.portfolio section:not(.contact) img.client-logo {
+  width: 75%;
+}
+.portfolio section:not(.contact):nth-child(odd) {
+  background: #23143e;
+}
+.portfolio section:not(.contact):nth-child(odd) h2 {
+  color: white;
+}
+.portfolio section:not(.contact):nth-child(odd) small {
+  font-size: 1.25em;
+  color: white;
+}
+.portfolio section:not(.contact):nth-child(even) {
+  background: #f0e8fa;
+}
+.portfolio section:not(.contact):nth-child(even) h2 {
+  color: #23143e;
+}
+.portfolio section:not(.contact):nth-child(even) small {
+  font-size: 1.25em;
+  color: #23143e;
 }
 
 .filter {

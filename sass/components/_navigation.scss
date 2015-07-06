@@ -5,6 +5,7 @@ nav {
     
     ul {
         margin: 0;
+        padding-top: 5px;
         
         li {
             @include span(3 of 12);
@@ -26,6 +27,17 @@ nav {
                 @include span(3 of 12 last);
                 //color: #3de652;
             }
+            
+            a {
+                font-size: 1em;
+                transition: all 0.1s ease-out;
+                
+                &:hover {
+                    color: $primary;
+                    font-size: 1.2em;
+                    transition: all 0.1s ease-out;
+                }
+            }
         }
     }
 }
@@ -36,6 +48,31 @@ nav {
             font-size: 30px !important;
             margin-left: 0 !important;
         
+        }
+    }
+    
+    i.menu-item-icon {
+        img {
+            margin-bottom: -2px;
+            margin-left: -1px;
+        }
+        
+        &.instagram {
+            img {
+                transform: rotate(-80deg);
+            }
+        }
+        
+        &.twitter {
+            img {
+                transform: rotate(-140deg);
+            }
+        }
+        
+        &.linkedin {
+            img {
+                transform: rotate(-200deg);
+            }
         }
     }
 }   

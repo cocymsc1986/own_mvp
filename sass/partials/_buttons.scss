@@ -1,0 +1,11 @@
+button.primary {
+    font-family: $primary-font;
+    background: $accent;
+    padding: 1em;
+    border: none;
+    color: $white;
+    font-size: 1.25em;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px darken($light-purple, 10%);
+}

@@ -1,9 +1,13 @@
+$primary-font: 'Roboto','Source Sans Pro';
+$title-font: 'Open Sans';
+
 body {
-    font-family: 'Source Sans Pro';
+    font-family: $primary-font;
     font-size: 16px; // 1em
 }
 
 h1, h2, h3, h4, h5 {
+    font-family: $title-font;
     font-weight: 700;
 }
 

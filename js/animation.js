@@ -1,5 +1,9 @@
 // social icons
 $(document).ready(function() {
+    // hide loader and show items when loaded
+    TweenLite.set(".loader", {display:"none"});
+    TweenLite.set("body.js *:not(.loader)", {visibility:"visible"});
+    
 	var menuItemNum=$(".menu-item").length;
 	var angle=120;
 	var distance=100;
@@ -38,6 +42,9 @@ $(document).ready(function() {
 	});
 
 	function pressHandler(event){
+        $('.menu-items').toggleClass('visible');
+        $('.menu-toggle-button').toggleClass('open');
+        
 		on=!on;
 
 		TweenMax.to($(this).children('.menu-toggle-icon'),0.4,{
@@ -49,6 +56,7 @@ $(document).ready(function() {
 		on?openMenu():closeMenu();
 		
 	}
+    
 	function openMenu(){
 		$(".menu-item").each(function(i){
 			var delay=i*0.08;
@@ -174,6 +182,11 @@ $(document).ready(function() {
             if($('.social-menu-container').hasClass('hide')) {
                 
             } else {
+                if($('.menu-items').hasClass('visible')) {
+                    $('.menu-toggle-button').mousedown();
+                    $('.menu-toggle-button').mouseup();
+                }
+                
                 $('.social-menu-container').addClass('hide');
             }
         } else {

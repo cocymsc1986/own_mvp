@@ -1,5 +1,21 @@
+.hidden {
+    display: none;
+}
+
+// loader
+body.js * {
+    visibility: hidden;
+}
+// end
+
+.loader {
+    visibility: visible !important;
+    margin: 200px auto 0;
+}
+
 section {
     height: 100vh;
+    max-height: 1000px;
     min-height: 600px;
     background-attachment: fixed;
     background-size: 100%;
@@ -36,6 +52,7 @@ section {
         height: auto;
         padding: 2em 0;
         color: $white;
+        overflow: hidden;
         
         .skill {
             width: 33%;
@@ -45,22 +62,76 @@ section {
                 width: 100%;
             }
             
+            &:first-child {
+                h3 i.more:before {
+                    
+                }   margin-left: 7px;
+            }
+            
             h3 {
-                i {
-                    display: inline-block;
-                    border-radius: 50%;
+                i.more {
+                    display: block;
+                    border-radius: 15px;
                     height: 30px;
                     width: 30px;
                     background: $accent;
                     color: $white;
                     vertical-align: middle;
-                    margin-left: 7px;
+                    margin: 0 auto;
                     box-shadow: 2px 2px 5px #060410;
                     line-height: 19px;
+                    cursor: pointer;
+                    transition: all 0.2s ease-out;
                     
                     &:before {
                         font-size: 15px;
-                        margin-left: 1px;   
+                        margin-left: 8px;  
+                        opacity: 1;
+                        transition: all 0.75s ease-out;
+                    }
+                    
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: all 0.2s ease-out;
+                        box-shadow: 3px 3px 3px darken($primary, 10%);
+                    }
+                    
+                    span {
+                        height: 0;
+                        font-size: 0.75em;
+                        font-weight: normal;
+                        font-style: normal;
+                        line-height: 26px;
+                        padding: 0.75em;
+                        text-align: left;
+                        
+                        opacity: 0;
+                        transition: all 0s linear;
+                    }
+                    
+                    &.open {
+//                        transform: scale(10);
+//                        border-radius: 1px;
+                        height: 320px;
+                        width: 300px;
+                        transition: all 0.2s ease-out;
+                        
+                        &:hover {
+                            transform: scale(1);
+                        }
+                        
+                        &:before {
+                            height: 0;
+                            opacity: 0;
+                            transition: all 0.2s ease-out;
+                        }
+                        
+                        span {
+                            display: inline-block;
+                            margin-top: -15px;
+                            opacity: 1;
+                            transition: all 0.7s ease-in;
+                        }
                     }
                 }
             }
@@ -74,7 +145,8 @@ section {
     &.four {
         @extend .clearfix;
         height: auto;
-        padding: 2em 0;
+        padding: 2em 0 5em;
+        color: $primary;
         background: $light-purple;
         
         .work-container {
@@ -82,12 +154,13 @@ section {
             float: left;
         
             .work-example {
-                width: 250px;
-                height: 250px;
+                width: 200px;
+                height: 200px;
                 border-radius: 50%;
-                border: 8px solid $primary;
+                border: 6px solid $primary;
                 margin: 2em auto;
-                background-color: $accent;
+                background-color: $primary;
+                cursor: pointer;
 
                 &.barnet {
                     background-image: url('../assets/images/barnet_thumb.png');
@@ -113,8 +186,20 @@ section {
                     background-image: url('../assets/images/connect_thumb.png');
                 }
                 
+                .client-logo {
+                    opacity: 0;
+                    width: 80%;
+                    transform: translate(0%,73%);
+                    transition: opacity 0.5s linear;
+                }   
+                
                 &:hover {
-                    filter: brightness(70%);
+                    background: $primary;
+                    
+                    .client-logo {
+                        opacity: 1;
+                        transition: opacity 0.5s linear;
+                    }
                 }
             }
         }
@@ -130,23 +215,148 @@ section {
         img {
             height: 75px;
             text-align: center;
-            margin: 2em 4em;
+            margin: 4em 4em;
         }
     }
     
-    &.six {
-        h2 {
-            margin: 0;
-            padding: 0.5em 0;
+    &.contact {
+        padding: 2em;
+        color: $primary;
+        
+        .social {
+            @extend .clearfix;
+            margin: 4em auto;
+
+            div {
+                @include span(4 of 12);
+
+                &:last-child {
+                    @include span(4 of 12 last);      
+                }
+
+                i:before {
+                    font-size: 10em;
+                    color: $primary;
+                    transition: color 0.1s linear;
+                }
+                
+                a:hover {
+                    i:before {
+                        color: $accent;
+                        transition: color 0.1s linear;
+                    }
+                }
+            }
         }
-        
-    }
-    
-    &.seven {
-        
+
+        button {
+            margin-bottom: 2em;
+            cursor: pointer;
+            transition: all 0.2s ease-out;
+            
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 4px 4px 4px #ccc;
+                transition: all 0.2s ease-out;
+            }
+            
+            &:active {
+                transform: scale(1.05);
+                transition: all 0.05s ease-out;
+                background: darken($accent,10%);
+            }
+        }
+
+        .email, .telephone, .twitter {
+            display: inline-block;
+            margin: 1em;
+            color: $primary;
+
+            i {
+                margin-right: 1em;
+
+                &:before {
+                    font-size: 1.7em;
+                }
+            }
+
+            span {
+                font-size: 2em;
+                font-weight: bold;
+            }
+        }
     }
 }
 
+.footer {
+    color: $white;
+    padding: 1em;
+    background: $primary;   
+}
+
+.portfolio {
+    section:not(.contact) {
+        text-align: left;
+        padding: 4em 2em 1em;
+        max-height: 800px;
+        
+        &.portfolio-intro {
+            padding-bottom: 0;
+            
+            .portfolio-head {
+                width: 100%;   
+            }
+        }
+        
+        .work-description {
+            @include span(4 of 12);
+            
+            h2 {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+        
+        img {
+            &.portfolio-example {
+                @include span(7 of 12 last);
+                border-radius: 3px;
+            }
+            
+            &.client-logo {
+                width: 75%;   
+            }
+        }
+        
+        &:nth-child(odd) {
+            background: $primary;
+            
+            h2 {
+                color: $white;
+            }
+            
+            small {
+                font-size: 1.25em;
+                color: $white;
+            }
+        }
+        
+        &:nth-child(even) {
+            background: $light-purple;
+            
+            h2 {
+                color: $primary;
+            }
+            
+            small {
+                font-size: 1.25em;
+                color: $primary;
+            }
+        }
+    }
+}
+
+// filter declared in html but hidden off screen
 .filter {
     position: absolute;
     left: -999999px;

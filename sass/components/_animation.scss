@@ -1,4 +1,24 @@
 // animation related css that can be separated
+
+// loader
+.loader {
+    circle {
+        stroke-dasharray: 315;
+        stroke-dashoffset: 630;
+        transform-origin: center;
+        animation: loader 2s linear infinite;
+    }
+}
+
+
+@-webkit-keyframes loader {
+    to { 
+        stroke-dashoffset: 0;
+        transform: rotate(360deg);
+        transform-origin: center;
+    }
+}
+
 // blob
 
 .social-menu-container {
@@ -12,6 +32,25 @@
         right: -200px;
         transition: right 0.5s ease-in;
     }
+    
+    .menu-toggle-button {
+        &:hover {
+            i {
+                color: lighten($accent, 40%);
+                transition: color 0.1s linear;
+            }
+        }
+        
+//        &.open {
+//            &:hover {
+//                i {
+//                    background: none;
+//                }
+//            }
+//        }
+    }
+    
+    
 }
 
 // typing effect... Thanks to Lea Verou http://lea.verou.me/2011/09/pure-css3-typing-animation-with-steps/

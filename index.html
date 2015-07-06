@@ -25,6 +25,13 @@
         <script src="js/vendor/modernizr/modernizr.custom.min.js"></script>
     </head>
     <body>
+        <script type="text/javascript">
+            document.getElementsByTagName('body')[0].className+=' js'                    
+        </script>
+        <svg class="loader" height="110px" width="110px" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <circle cx="55" cy="55" r="50" stroke-width="5px" fill="none" stroke="#00B8A5" />
+        </svg>
+        
         <svg class="filter" xmlns="http://www.w3.org/2000/svg" version="1.1">
           <defs>
             <filter id="goo">
@@ -43,19 +50,19 @@
                     <ul class="menu-items">
                         <li class="menu-item">
                             <button class="menu-item-button">
-                                <i class="menu-item-icon"></i>
+                                <a href="https://instagram.com/cocymsc1986"><i class="menu-item-icon icon instagram"><img src="assets/icons/instagram_white.svg"></i></a>
                             </button>
                             <div class="menu-item-bounce"></div>
                         </li>
                         <li class="menu-item">
                             <button class="menu-item-button">
-                                <i class="menu-item-icon icon icon-box"></i>
+                                <a href="https://twitter.com/likemike1986"><i class="menu-item-icon icon twitter"><img src="assets/icons/twitter_white.svg"></i></a>
                             </button>
                             <div class="menu-item-bounce"></div>
                         </li>
                         <li class="menu-item">
                             <button class="menu-item-button">
-                                <i class="menu-item-icon icon icon-trash"></i>
+                                <a href="https://uk.linkedin.com/pub/michael-cockcroft/32/764/9aa"><i class="menu-item-icon icon linkedin"><img src="assets/icons/linkedin_white.svg"></i></a>
                             </button>
                             <div class="menu-item-bounce"></div>
                         </li>
@@ -69,10 +76,10 @@
         <nav>
             <div class="section-inner">
                 <ul>
-                    <li>home</li>
-                    <li>about</li>
-                    <li>work</li>
-                    <li>contact</li>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="work.html">work</a></li>
+                    <li><a href="contact.html">contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -122,7 +129,7 @@
                                 C433.943,96.026,439,113,439,113L292.334,300.666L278.667,290z"/>
                         </svg>
                         
-                        <h3>ux &amp; design <i class="more flaticon-plus79"></i></h3>
+                        <h3>ux &amp; design <i class="more flaticon-plus79"><span class="close-info">The bread and butter of what I do. I am a web/interaction designer and all work that I do is user centered, following a lean UX, agile process. Designing is something I have been doing for over 10 years since starting art college and is what I love.</span></i></h3>
                     </div>
                     <div class="sketch skill draw">
                         <?xml version="1.0" encoding="utf-8"?>
@@ -157,7 +164,7 @@
                             <path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" d="M432.084,370.333L264.5,484L134.1,308"/>
                         </svg>
                         
-                        <h3>sketch <i class="more flaticon-plus79"></i></h3>
+                        <h3>sketch <i class="more flaticon-plus79"><span class="close-info">The thing that I take most pleasure in. I am trained technically in drawing, but I love sketching anything, be it work related wireframes or just general doodling... I do it a lot! Sketching, for me, is the easiest way to communicate an idea.</span></i></h3>
                     </div>
                     <div class="code skill draw">
                         <?xml version="1.0" encoding="utf-8"?>
@@ -176,14 +183,14 @@
                                 s-6.75-3.022-6.75-6.75s3.022-6.75,6.75-6.75S459.541,170.522,459.541,174.25z"/>
                             <path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" d="M480.75,174.25c0,3.728-3.022,6.75-6.75,6.75
                                 s-6.75-3.022-6.75-6.75s3.022-6.75,6.75-6.75S480.75,170.522,480.75,174.25z"/>
-                            <path fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" d="M240.536,373.25
+                            <path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="M240.536,373.25
                                 L173.5,308.769l67.674-64.27"/>
-                            <path fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" d="M359.284,244.499
+                            <path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="M359.284,244.499
                                 l67.036,64.481l-67.674,64.27"/>
-                            <path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="10" stroke-miterlimit="10" d="M267.563,373.25l63.418-128.751"/>
+                            <path fill="#FFFFFF" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" d="M267.563,373.25l63.418-128.751"/>
                         </svg>
                         
-                        <h3>code <i class="more flaticon-plus79"></i></h3>
+                        <h3>code <i class="more flaticon-plus79"><span class="close-info">I taught myself to code a long time ago and have been at it for over 5 years now. I use most front-end technologies and am really into SVG and animation, bringing the user's interaction with a web app to life.</span></i></h3>
                     </div>
                 </div>
             </section>
@@ -193,67 +200,106 @@
 <!--                <h2>Sketching is the best way to communicate ideas</h2>-->
             </section>
             <section class="four portfolio">
-                <h2>...and this is who I've done it with...</h2>
-                <!-- work -->
-                <div class="work-container">
-                    <article class="work-example barnet">
-
-                    </article>
-                    <span class="client-logo"></span>
-                </div>
-                <div class="work-container">
-                    <article class="work-example tesco">
-                    </article>
-                    <span class="client-logo"></span>
-                </div>
-                <div class="work-container">
-                    <article class="work-example reed">
-                    </article>
-                    <span class="client-logo"></span>
-                </div>
-                <div class="work-container">
-                    <article class="work-example alessio">
-                    </article>
-                    <span class="client-logo"></span>
-                </div>
-                <div class="work-container">
-                    <article class="work-example rac">
-                    </article>
-                    <span class="client-logo"></span>
-                </div>
-                <div class="work-container">
-                    <article class="work-example connect">
-                    </article>
-                    <span class="client-logo"></span>
+                <div class="section-inner">
+                    <h2>...and this is who I've done it with...</h2>
+                    <!-- work -->
+                    <div class="work-container">
+                        <article class="work-example barnet">
+                            <img src="assets/images/client_logos/barnet_white.png" alt="barnet-logo" class="client-logo" />
+                        </article>
+                    </div>
+                    <div class="work-container">
+                        <article class="work-example tesco">
+                            <img src="assets/images/client_logos/tesco_white.png" alt="tesco-logo" class="client-logo" />
+                        </article>
+                    </div>
+                    <div class="work-container">
+                        <article class="work-example reed">
+                            <img src="assets/images/client_logos/reed_white.png" alt="reed-logo" class="client-logo" />
+                        </article>
+                    </div>
+                    <div class="work-container">
+                        <article class="work-example alessio">
+                            <img src="assets/images/client_logos/alessios_white.png" alt="alessios-logo" class="client-logo" />
+                        </article>
+                    </div>
+                    <div class="work-container">
+                        <article class="work-example rac">
+                            <img src="assets/images/client_logos/rac_white.png" alt="rac-logo" class="client-logo" />
+                        </article>
+                    </div>
+                    <div class="work-container">
+                        <article class="work-example connect">
+                            <img src="assets/images/client_logos/innovate_white.png" alt="innovate-logo" class="client-logo" />
+                        </article>
+                    </div>
                 </div>
             </section>
             <section class="five software">
-                <!-- software -->
-                <h2>...using this kinda stuff...</h2>
-                <img src="assets/images/software_logos/white_axure.png" alt="axure">
-                <img src="assets/images/software_logos/white_css.png" alt="css">
-                <img src="assets/images/software_logos/white_git.png" alt="git">
-                <img src="assets/images/software_logos/white_gulp.png" alt="gulp">
-                <img src="assets/images/software_logos/white_html.png" alt="html">
-                <img src="assets/images/software_logos/white_jquery.png" alt="jquery">
-                <img src="assets/images/software_logos/white_node.png" alt="node">
-                <img src="assets/images/software_logos/white_brackets.png" alt="brackets">
+                <div class="section-inner">
+                    <!-- software -->
+                    <h2>...using this kinda stuff...</h2>
+                    <img src="assets/images/software_logos/white_axure.png" alt="axure">
+                    <img src="assets/images/software_logos/white_css.png" alt="css">
+                    <img src="assets/images/software_logos/white_git.png" alt="git">
+                    <img src="assets/images/software_logos/white_gulp.png" alt="gulp">
+                    <img src="assets/images/software_logos/white_html.png" alt="html">
+                    <img src="assets/images/software_logos/white_jquery.png" alt="jquery">
+                    <img src="assets/images/software_logos/white_node.png" alt="node">
+                    <img src="assets/images/software_logos/white_brackets.png" alt="brackets">
+                </div>
             </section>
-            <section class="six">
-                <!-- get in touch -->
-                <h2>Want to know more?</h2>
-                
-                <footer>
-            
-                </footer>
+            <section class="six contact">
+                <div class="section-inner">
+                    <!-- get in touch -->
+                    <h2>Want to know more?</h2>
+
+                    <div class="social">
+                        <div class="instagram-lg">
+                            <a href="https://instagram.com/cocymsc1986"><i class="flaticon-instagram19"></i></a>
+                        </div>
+                        <div class="twitter-lg">
+                            <a href="https://twitter.com/likemike1986"><i class="flaticon-twitter"></i></a>
+                        </div>
+                        <div class="linkedin-lg">
+                            <a href="https://uk.linkedin.com/pub/michael-cockcroft/32/764/9aa"><i class="flaticon-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="message">
+                            <button class="primary">Send me a message</button>
+                        </div>
+
+                        <div class="telephone">
+                            <i class="flaticon-telephone46"></i><span>07450 961 422</span>
+                        </div>
+                        <div class="email">
+                            <i class="flaticon-opened4"></i><span>info@likemike.co</span>
+                        </div>
+                        <div class="twitter">
+                            <i class="flaticon-twitter1"></i><a href="https://twitter.com/likemike1986"><span>@likemike1986</span></a>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
         
-        <div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>, <a            href="http://www.flaticon.com/authors/ocha" title="OCHA">OCHA</a>, <a href="http://www.flaticon.com/authors/balraj-chana" title="Balraj Chana">Balraj Chana</a>, <a href="http://www.flaticon.com/authors/google" title="Google">Google</a>, <a href="http://www.flaticon.com/authors/bogdan-rosu" title="Bogdan Rosu">Bogdan Rosu</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+        <footer class="footer">
+            <div class="section-inner">
+                <p>&copy; 2015 All rights reserved</p>
+            </div>
+        </footer>
         
+        <div class="hidden">Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>, <a            href="http://www.flaticon.com/authors/ocha" title="OCHA">OCHA</a>, <a href="http://www.flaticon.com/authors/balraj-chana" title="Balraj Chana">Balraj Chana</a>, <a href="http://www.flaticon.com/authors/google" title="Google">Google</a>, <a href="http://www.flaticon.com/authors/bogdan-rosu" title="Bogdan Rosu">Bogdan Rosu</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+        
+        <!-- dev -->
         <script src="js/vendor/jquery/jquery-2.1.1.min.js"></script>
         <script src="js/vendor/GSAP/TweenMax.min.js"></script>
         <script src="js/animation.js"></script>
+        <script src="js/custom.js"></script>
+        
+        <!-- prod -->
 <!--        <script src="js/compressed/main.js"></script>-->
     </body>
 </html>
