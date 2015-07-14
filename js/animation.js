@@ -144,10 +144,11 @@ $(document).ready(function() {
     
     var scrollPos = $(document).scrollTop();
     
+    // home page animation
     // welcome section
     TweenMax.from(".me", 1, {opacity: 0, scale: 0, ease: Bounce.easeOut});
     TweenMax.from(".welcome-text-container", 1, {opacity: 0, y: 50, delay: 1});
-    TweenMax.staggerFrom("nav li", 0.5, {opacity: 0, y: -200, delay: 1.5}, 0.2);
+    TweenMax.staggerFrom(".home nav li", 0.5, {opacity: 0, y: -200, delay: 1.5}, 0.2);
     TweenMax.from(".social-menu-container", 0.5, {opacity: 0, delay: 2});
     // end
 
@@ -165,48 +166,103 @@ $(document).ready(function() {
     $('.skill h3').css('opacity','0');
     // end
 
-    // portfolio work
+    // portfolio work homepage
     var folioAnim = TweenMax.staggerFrom(".work-example", 1, {scale: 0, paused: true}, 0.3);
     // end
 
     // software logos
     var softwareAnim = TweenMax.from(".software img", 1, {opacity: 0, paused: true});
     // end
-
+    
     // scroll handler
     $(window).scroll(function() {
-        var scrollPos = $(document).scrollTop();
-        var animStartPos = scrollPos + (($(window).height() / 3) * 2);
-        
-        if(scrollPos > 5) {
-            if($('.social-menu-container').hasClass('hide')) {
-                
-            } else {
-                if($('.menu-items').hasClass('visible')) {
-                    $('.menu-toggle-button').mousedown();
-                    $('.menu-toggle-button').mouseup();
+        if($('body').hasClass('home')) {
+            var scrollPos = $(document).scrollTop();
+            var animStartPos = scrollPos + (($(window).height() / 3) * 2);
+
+            if(scrollPos > 5) {
+                if($('.social-menu-container').hasClass('hide')) {
+
+                } else {
+                    if($('.menu-items').hasClass('visible')) {
+                        $('.menu-toggle-button').mousedown();
+                        $('.menu-toggle-button').mouseup();
+                    }
+
+                    $('.social-menu-container').addClass('hide');
                 }
-                
-                $('.social-menu-container').addClass('hide');
+            } else {
+                $('.social-menu-container').removeClass('hide');   
             }
-        } else {
-            $('.social-menu-container').removeClass('hide');   
-        }
 
-        if($('.skill').offset().top < animStartPos) {
-            $('.skill').addClass('played');
-        }
-
-        if($('.portfolio').offset().top < animStartPos) {
-            for(i = 0; i < folioAnim.length; i++) {
-                folioAnim[i].paused(false);
+            if($('.skill').offset().top < animStartPos) {
+                $('.skill').addClass('played');
             }
-        }
 
-        if($('.software').offset().top < animStartPos) {
-            softwareAnim.paused(false);
+            if($('.portfolio').offset().top < animStartPos) {
+                for(i = 0; i < folioAnim.length; i++) {
+                    folioAnim[i].paused(false);
+                }
+            }
+
+            if($('.software').offset().top < animStartPos) {
+                softwareAnim.paused(false);
+            }
         }
     })
     // end
 
+    // portfolio page animation
+    
+    // portfolio load
+    TweenMax.from(".portfolio-intro h2", 1, {opacity: 0, y: 50});
+    TweenMax.from(".portfolio-intro p", 1, {opacity: 0, y: 50});
+    TweenMax.from(".portfolio-intro img", 1, {opacity: 0, y: 100, delay: 0.5});
+    
+    var animObject = {
+        // barnet
+        barnet: TweenMax.staggerFrom(".barnet-work-animation", 1, {opacity: 0, y: 100, paused: true}, 0.3),
+        // end
+
+        // tesco
+        tesco: TweenMax.staggerFrom(".tesco-work-animation", 1, {opacity: 0, y: 100, paused: true}, 0.3),
+        // end
+
+        // reed
+        reed: TweenMax.staggerFrom(".reed-work-animation", 1, {opacity: 0, y: 100, paused: true}, 0.3),
+        // end
+
+        // alessios
+        alessios: TweenMax.staggerFrom(".alessios-work-animation", 1, {opacity: 0, y: 100, paused: true}, 0.3),
+        // end
+
+        // rac
+        rac: TweenMax.staggerFrom(".rac-work-animation", 1, {opacity: 0, y: 100, paused: true}, 0.3),
+        // end
+
+        // connect
+        connect: TweenMax.staggerFrom(".connect-work-animation", 1, {opacity: 0, y: 100, paused: true}, 0.3)
+        // end
+    }
+    
+    // scroll handler
+    $(window).scroll(function() {
+        if($('body').hasClass('portfolio')) {
+            var scrollPos = $(document).scrollTop();
+            var animStartPos = scrollPos + (($(window).height() / 3) * 2);
+            
+            $('.work-section').each(function() {
+                var sectionNum = 0;
+                var key = $(this).attr('id');
+                
+                if($('#'+key).offset().top < animStartPos) {
+                    for(i = 0; i < animObject[key].length; i++) {
+                        animObject[key][i].paused(false);
+                    }
+                }
+                sectionNum++;
+            });
+        }
+    })
+    // end
 })

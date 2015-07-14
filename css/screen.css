@@ -58,14 +58,13 @@ bold {
 
 button.primary {
   font-family: "Roboto", "Source Sans Pro";
-  background: #00bcd4;
+  background: #00BCD4;
   padding: 1em;
   border: none;
-  color: white;
+  color: #FFFFFF;
   font-size: 1.25em;
-  font-weight: bold;
   border-radius: 5px;
-  box-shadow: 2px 2px 2px #d5bef1;
+  box-shadow: 2px 2px 2px #d8cde4;
 }
 
 body {
@@ -183,7 +182,6 @@ body {
   from {
     width: 100%;
   }
-
   to {
     width: 0;
   }
@@ -192,7 +190,6 @@ body {
   from, to {
     border-color: transparent;
   }
-
   50% {
     border-color: black;
   }
@@ -201,7 +198,6 @@ body {
   from {
     width: 100%;
   }
-
   to {
     width: 0;
   }
@@ -210,7 +206,6 @@ body {
   from, to {
     border-color: transparent;
   }
-
   50% {
     border-color: black;
   }
@@ -253,7 +248,7 @@ body {
 .menu-toggle-button,
 .menu-item-bounce,
 .menu-item-button {
-  background: #00bcd4;
+  background: #00BCD4;
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -315,7 +310,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  color: #00bcd4;
+  color: #00BCD4;
 }
 
 .menu-item-button:hover {
@@ -325,7 +320,7 @@ body {
 nav {
   min-height: 50px;
   padding-top: 1em;
-  background: #f0e8fa;
+  background: #F2EEF6;
 }
 nav ul {
   margin: 0;
@@ -337,9 +332,8 @@ nav ul li {
   margin-right: 1.69492%;
   display: inline;
   text-align: center;
-  font-weight: bold;
   font-size: 1.2em;
-  color: #00bcd4;
+  color: #00BCD4;
 }
 nav ul li:last-child {
   width: 23.72881%;
@@ -347,11 +341,11 @@ nav ul li:last-child {
   margin-right: 0;
 }
 nav ul li a {
-  font-size: 1em;
+  font-size: 1.1em;
   transition: all 0.1s ease-out;
 }
 nav ul li a:hover {
-  color: #23143e;
+  color: #23143E;
   font-size: 1.2em;
   transition: all 0.1s ease-out;
 }
@@ -390,11 +384,11 @@ body.js * {
 section {
   height: 100vh;
   max-height: 1000px;
-  min-height: 600px;
+  min-height: 700px;
   background-attachment: fixed;
   background-size: 100%;
   text-align: center;
-  background-color: #f0e8fa;
+  background-color: #F2EEF6;
 }
 section h2 {
   margin: 0.5em 0 0.75em;
@@ -404,20 +398,20 @@ section.one {
   text-align: center;
 }
 section.one .welcome-text-container {
-  color: #23143e;
+  color: #23143E;
   z-index: 1;
 }
 section.one .me {
   position: relative;
   width: 25%;
-  margin: 5% auto;
+  margin: 8% auto;
   -webkit-clip-path: circle(50% at 50% 50%);
 }
 section.two {
-  background: #23143e;
+  background: #23143E;
   height: auto;
   padding: 2em 0;
-  color: white;
+  color: #FFFFFF;
   overflow: hidden;
 }
 section.two .skill {
@@ -432,20 +426,20 @@ section.two .skill:first-child {
 }
 section.two .skill h3 i.more {
   display: block;
-  border-radius: 15px;
-  height: 30px;
-  width: 30px;
-  background: #00bcd4;
-  color: white;
+  border-radius: 16px;
+  height: 32px;
+  width: 32px;
+  background: #00BCD4;
+  color: #FFFFFF;
   vertical-align: middle;
   margin: 0 auto;
   box-shadow: 2px 2px 5px #060410;
-  line-height: 19px;
+  line-height: 18px;
   cursor: pointer;
   transition: all 0.2s ease-out;
 }
 section.two .skill h3 i.more:before {
-  font-size: 15px;
+  font-size: 16px;
   margin-left: 8px;
   opacity: 1;
   transition: all 0.75s ease-out;
@@ -467,8 +461,9 @@ section.two .skill h3 i.more span {
   transition: all 0s linear;
 }
 section.two .skill h3 i.more.open {
-  height: 320px;
+  height: 370px;
   width: 300px;
+  line-height: 30px;
   transition: all 0.2s ease-out;
 }
 section.two .skill h3 i.more.open:hover {
@@ -491,8 +486,8 @@ section.three {
 section.four {
   height: auto;
   padding: 2em 0 5em;
-  color: #23143e;
-  background: #f0e8fa;
+  color: #23143E;
+  background: #F2EEF6;
 }
 section.four .work-container {
   width: 33%;
@@ -502,9 +497,9 @@ section.four .work-container .work-example {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 6px solid #23143e;
+  border: 6px solid #23143E;
   margin: 2em auto;
-  background-color: #23143e;
+  background-color: #23143E;
   cursor: pointer;
 }
 section.four .work-container .work-example.barnet {
@@ -532,7 +527,7 @@ section.four .work-container .work-example .client-logo {
   transition: opacity 0.5s linear;
 }
 section.four .work-container .work-example:hover {
-  background: #23143e;
+  background: #23143E;
 }
 section.four .work-container .work-example:hover .client-logo {
   opacity: 1;
@@ -540,9 +535,9 @@ section.four .work-container .work-example:hover .client-logo {
 }
 section.five {
   height: auto;
-  color: white;
+  color: #FFFFFF;
   padding: 2em 0;
-  background: #23143e;
+  background: #23143E;
 }
 section.five img {
   height: 75px;
@@ -551,7 +546,7 @@ section.five img {
 }
 section.contact {
   padding: 2em;
-  color: #23143e;
+  color: #23143E;
 }
 section.contact .social {
   margin: 4em auto;
@@ -568,11 +563,11 @@ section.contact .social div:last-child {
 }
 section.contact .social div i:before {
   font-size: 10em;
-  color: #23143e;
+  color: #23143E;
   transition: color 0.1s linear;
 }
 section.contact .social div a:hover i:before {
-  color: #00bcd4;
+  color: #00BCD4;
   transition: color 0.1s linear;
 }
 section.contact button {
@@ -593,7 +588,7 @@ section.contact button:active {
 section.contact .email, section.contact .telephone, section.contact .twitter {
   display: inline-block;
   margin: 1em;
-  color: #23143e;
+  color: #23143E;
 }
 section.contact .email i, section.contact .telephone i, section.contact .twitter i {
   margin-right: 1em;
@@ -603,13 +598,12 @@ section.contact .email i:before, section.contact .telephone i:before, section.co
 }
 section.contact .email span, section.contact .telephone span, section.contact .twitter span {
   font-size: 2em;
-  font-weight: bold;
 }
 
 .footer {
-  color: white;
+  color: #FFFFFF;
   padding: 1em;
-  background: #23143e;
+  background: #23143E;
 }
 
 .portfolio section:not(.contact) {
@@ -619,9 +613,28 @@ section.contact .email span, section.contact .telephone span, section.contact .t
 }
 .portfolio section:not(.contact).portfolio-intro {
   padding-bottom: 0;
+  text-align: center;
+}
+.portfolio section:not(.contact).portfolio-intro .section-inner {
+  height: 100%;
+}
+.portfolio section:not(.contact).portfolio-intro .section-inner article {
+  height: 100%;
+  position: relative;
+}
+.portfolio section:not(.contact).portfolio-intro .section-inner article img {
+  position: absolute;
+  bottom: 24px;
+  left: 10%;
+  width: 80%;
 }
 .portfolio section:not(.contact).portfolio-intro .portfolio-head {
   width: 100%;
+}
+.portfolio section:not(.contact).portfolio-intro p {
+  color: #FFFFFF;
+  font-size: 1.4em;
+  margin-bottom: 1em;
 }
 .portfolio section:not(.contact) .work-description {
   width: 32.20339%;
@@ -637,29 +650,30 @@ section.contact .email span, section.contact .telephone span, section.contact .t
   float: right;
   margin-right: 0;
   border-radius: 3px;
+  margin-top: 3em;
 }
 .portfolio section:not(.contact) img.client-logo {
-  width: 75%;
+  width: 60%;
 }
 .portfolio section:not(.contact):nth-child(odd) {
-  background: #23143e;
+  background: #23143E;
 }
 .portfolio section:not(.contact):nth-child(odd) h2 {
-  color: white;
+  color: #FFFFFF;
 }
 .portfolio section:not(.contact):nth-child(odd) small {
   font-size: 1.25em;
-  color: white;
+  color: #FFFFFF;
 }
 .portfolio section:not(.contact):nth-child(even) {
-  background: #f0e8fa;
+  background: #F2EEF6;
 }
 .portfolio section:not(.contact):nth-child(even) h2 {
-  color: #23143e;
+  color: #23143E;
 }
 .portfolio section:not(.contact):nth-child(even) small {
   font-size: 1.25em;
-  color: #23143e;
+  color: #23143E;
 }
 
 .filter {

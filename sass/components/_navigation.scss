@@ -11,7 +11,6 @@ nav {
             @include span(3 of 12);
             display: inline;
             text-align: center;
-            font-weight: bold;
             font-size: 1.2em;
             color: $accent;
 
@@ -29,7 +28,7 @@ nav {
             }
             
             a {
-                font-size: 1em;
+                font-size: 1.1em;
                 transition: all 0.1s ease-out;
                 
                 &:hover {

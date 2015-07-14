@@ -16,7 +16,7 @@ body.js * {
 section {
     height: 100vh;
     max-height: 1000px;
-    min-height: 600px;
+    min-height: 700px;
     background-attachment: fixed;
     background-size: 100%;
     text-align: center;
@@ -38,7 +38,7 @@ section {
         .me {
             position: relative;
             width: 25%;
-            margin: 5% auto;
+            margin: 8% auto;
             -webkit-clip-path: circle(50% at 50% 50%);
         }
         
@@ -71,20 +71,20 @@ section {
             h3 {
                 i.more {
                     display: block;
-                    border-radius: 15px;
-                    height: 30px;
-                    width: 30px;
+                    border-radius: 16px;
+                    height: 32px;
+                    width: 32px;
                     background: $accent;
                     color: $white;
                     vertical-align: middle;
                     margin: 0 auto;
                     box-shadow: 2px 2px 5px #060410;
-                    line-height: 19px;
+                    line-height: 18px;
                     cursor: pointer;
                     transition: all 0.2s ease-out;
                     
                     &:before {
-                        font-size: 15px;
+                        font-size: 16px;
                         margin-left: 8px;  
                         opacity: 1;
                         transition: all 0.75s ease-out;
@@ -112,8 +112,9 @@ section {
                     &.open {
 //                        transform: scale(10);
 //                        border-radius: 1px;
-                        height: 320px;
+                        height: 370px;
                         width: 300px;
+                        line-height: 30px;
                         transition: all 0.2s ease-out;
                         
                         &:hover {
@@ -282,7 +283,6 @@ section {
 
             span {
                 font-size: 2em;
-                font-weight: bold;
             }
         }
     }
@@ -302,9 +302,32 @@ section {
         
         &.portfolio-intro {
             padding-bottom: 0;
+            text-align: center;
+            
+            .section-inner {
+                height: 100%;
+                
+                article {
+                    height: 100%;
+                    position: relative;
+                    
+                    img {
+                        position: absolute;
+                        bottom: 24px;
+                        left: 10%;
+                        width: 80%;
+                    }
+                }
+            }
             
             .portfolio-head {
                 width: 100%;   
+            }
+            
+            p {
+                color: $white;
+                font-size: 1.4em;
+                margin-bottom: 1em;
             }
         }
         
@@ -321,10 +344,11 @@ section {
             &.portfolio-example {
                 @include span(7 of 12 last);
                 border-radius: 3px;
+                margin-top: 3em;
             }
             
             &.client-logo {
-                width: 75%;   
+                width: 60%;   
             }
         }
         
