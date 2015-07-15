@@ -13,6 +13,10 @@ body.js * {
     margin: 200px auto 0;
 }
 
+main {
+    border-bottom: 5px solid $primary;   
+}
+
 section {
     height: 100vh;
     max-height: 1000px;
@@ -23,7 +27,11 @@ section {
     background-color: $light-purple;
     
     h2 {
-        margin: 0.5em 0 0.75em;   
+        padding: 0.5em 0 0.75em;   
+    }
+    
+    &.image {
+        height: 75vh;   
     }
     
     &.one {
@@ -38,7 +46,7 @@ section {
         .me {
             position: relative;
             width: 25%;
-            margin: 8% auto;
+            margin: 6% auto;
             -webkit-clip-path: circle(50% at 50% 50%);
         }
         
@@ -139,7 +147,7 @@ section {
         }
     }
     
-    &.three {
+    &.three.image {
         background-image: url('../assets/images/amends/9.jpg');
     }
     
@@ -221,7 +229,7 @@ section {
     }
     
     &.contact {
-        padding: 2em;
+        padding: 2em 2em 0;
         color: $primary;
         
         .social {
@@ -272,6 +280,7 @@ section {
             display: inline-block;
             margin: 1em;
             color: $primary;
+            margin-top: 3em;
 
             i {
                 margin-right: 1em;
@@ -282,7 +291,7 @@ section {
             }
 
             span {
-                font-size: 2em;
+                font-size: 1.75em;
             }
         }
     }
@@ -313,7 +322,8 @@ section {
                     
                     img {
                         position: absolute;
-                        bottom: 24px;
+                        //bottom: 24px;
+                        bottom: 0;
                         left: 10%;
                         width: 80%;
                     }
@@ -377,6 +387,29 @@ section {
                 color: $primary;
             }
         }
+    }
+}
+
+.about {
+    .about-intro {
+        padding-top: 4em;   
+    }
+    
+    section {
+        h2 {
+            padding: 1em 0;   
+        }
+    }
+    
+    .image {
+        background-image: url('../assets/images/amends/4.jpg');
+    }
+    
+    p {
+        font-size: 1.4em;
+        margin: 0 auto 1.5em;
+        max-width: 800px;
+        text-align: left;
     }
 }
 
