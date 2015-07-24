@@ -176,8 +176,19 @@ $(document).ready(function() {
     
     // scroll handler
     $(window).scroll(function() {
+        var scrollPos = $(document).scrollTop();
+        
+        if(scrollPos > 0) {
+            if($('nav').hasClass('scrolled')) {
+                // do nothing
+            } else {
+                $('nav').addClass('scrolled'); 
+            }
+        } else {
+            $('nav').removeClass('scrolled'); 
+        }
+        
         if($('body').hasClass('home')) {
-            var scrollPos = $(document).scrollTop();
             var animStartPos = scrollPos + (($(window).height() / 3) * 2);
 
             if(scrollPos > 5) {
@@ -215,9 +226,10 @@ $(document).ready(function() {
     // portfolio page animation
     
     // portfolio load
-    TweenMax.from(".portfolio-intro h2", 1, {opacity: 0, y: 50});
-    TweenMax.from(".portfolio-intro p", 1, {opacity: 0, y: 50});
-    TweenMax.from(".portfolio-intro img", 1, {opacity: 0, y: 100, delay: 0.5});
+    TweenMax.from(".portfolio-intro h2", 1, {opacity: 0, y: 50, delay: 0.25});
+    TweenMax.from(".portfolio-intro p", 1, {opacity: 0, y: 50, delay: 0.25});
+    TweenMax.from(".portfolio-intro img", 1, {opacity: 0, y: 100, delay: 0.75});
+    TweenMax.staggerFrom(".portfolio nav li", 0.5, {opacity: 0, y: -200, delay: 1}, 0.2);
     
     var animObject = {
         // barnet
@@ -265,4 +277,11 @@ $(document).ready(function() {
         }
     })
     // end
+    
+    // about
+    
+    TweenMax.from(".about h2", 1, {opacity: 0, delay: 0.5});
+    TweenMax.from(".about p", 1, {opacity: 0, delay: 1});
+    TweenMax.staggerFrom(".about li", 0.5, {opacity: 0, y: -200, delay: 1.5}, 0.2);
+    
 })

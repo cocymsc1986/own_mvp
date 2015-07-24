@@ -1,7 +1,22 @@
 nav {
-    min-height: 60px;
-    padding: 0.75em;
+    position: fixed;
+    width: 100%;
+    min-height: 50px;
+    padding: 0.5em;
     background: $light-purple;
+    z-index: 999;
+    
+    transition: all 0.2s ease-out;
+    
+    &.scrolled {
+        padding: 0.25em;
+        min-height: 37px;
+        opacity: 0.85;
+        
+        &:hover {
+            opacity: 1;
+        }
+    }
     
     ul {
         margin: 0;
@@ -11,7 +26,7 @@ nav {
             @include span(3 of 12);
             display: inline;
             text-align: center;
-            font-size: 1.2em;
+            font-size: 1em;
             color: $accent;
 
 //            &:nth-child(2) {
@@ -29,7 +44,6 @@ nav {
             
             a {
                 position: relative;
-                font-size: 1.1em;
                 transition: all 0.1s ease-out;
                 
                 &:after {

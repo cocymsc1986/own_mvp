@@ -1,4 +1,4 @@
-$primary-font: 'Roboto','Source Sans Pro';
+$primary-font: 'Droid Sans','Roboto','Source Sans Pro';
 $title-font: 'Open Sans';
 
 body {
@@ -14,10 +14,18 @@ h1, h2, h3, h4, h5 {
 
 h1 {
     font-size: 4em; // 64px
+    
+    @media(max-width: 480px) {
+        font-size: 3em;
+    }
 }
 
 h2 {
     font-size: 3em; // 48px
+    
+    @media(max-width: 767px) {
+        font-size: 2.5em;
+    }
 }
 
 h3 {
