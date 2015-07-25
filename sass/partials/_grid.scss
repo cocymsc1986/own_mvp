@@ -26,8 +26,16 @@ body {
 .section-inner {
     max-width: 1280px;
     margin: 0 auto;
+    
+    @media (max-width: 767px) {
+        margin: 0 2em;
+    }
+    
+    @media (max-width: 480px) {
+        margin: 0 1em;
+    }
 }
 
-* {
-    box-sizing: border-box;   
-}
+//* {
+//    box-sizing: border-box;   
+//}

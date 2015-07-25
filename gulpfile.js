@@ -10,9 +10,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
-    webserver = require('gulp-webserver'),
-    livereload = require('gulp-livereload'),
-    del = require('del');    
+    webserver = require('gulp-webserver');
 
 gulp.task('compass', function() {
   gulp.src('sass/*.scss')

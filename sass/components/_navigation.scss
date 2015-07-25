@@ -1,9 +1,10 @@
 nav {
     position: fixed;
     width: 100%;
-    min-height: 50px;
+    min-height: 35px;
     padding: 0.5em;
     background: $light-purple;
+    font-family: "open sans";
     z-index: 999;
     
     transition: all 0.2s ease-out;
@@ -27,7 +28,11 @@ nav {
             display: inline;
             text-align: center;
             font-size: 1em;
-            color: $accent;
+            color: $primary;
+            
+            @media (max-width: 767px) {
+                text-align: left;   
+            }
 
 //            &:nth-child(2) {
 //                color: #bf2926;    

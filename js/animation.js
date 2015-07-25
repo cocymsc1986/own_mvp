@@ -284,4 +284,11 @@ $(document).ready(function() {
     TweenMax.from(".about p", 1, {opacity: 0, delay: 1});
     TweenMax.staggerFrom(".about li", 0.5, {opacity: 0, y: -200, delay: 1.5}, 0.2);
     
+    // end
+    
+    // contact
+    
+    TweenMax.from(".contact h2", 1, {opacity: 0, delay: 0.25});
+    TweenMax.staggerFrom(".contact li", 0.5, {opacity: 0, y: -200, delay: 0.5}, 0.2);
+    
 })

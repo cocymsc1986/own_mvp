@@ -56,16 +56,16 @@ section {
         .me {
             position: relative;
             width: 25%;
-            margin: 9% auto 4%;
+            margin: 10% auto;
             -webkit-clip-path: circle(50% at 50% 50%);
             
             @media(max-width: 767px) {
                 width: 40%;
-                margin: 4em auto 1em;
+                margin: 6em auto 3em;
             }
             
             @media(max-width: 480px) {
-                width: 60%;
+                width: 50%;
             }
         }
         
@@ -187,6 +187,14 @@ section {
             
             @media(max-width: 767px) {
                 width: 50%;
+                
+                .work-example {
+                    background-image: none !important; 
+                    
+                    .client-logo {
+                        opacity: 1 !important;
+                    }
+                }
             }
             
             @media(max-width: 480px) {
@@ -359,11 +367,17 @@ section {
             text-align: center;
             max-height: none;
             height: auto;
+            padding: 2em 2em 1em;
         }
         
         &.portfolio-intro {
             padding-bottom: 0;
             text-align: center;
+            
+            @media(max-width: 767px) {
+                padding-top: 5em;
+                min-height: 500px;
+            }
             
             .section-inner {
                 height: 100%;
@@ -378,6 +392,10 @@ section {
                         bottom: 0;
                         left: 10%;
                         width: 80%;
+                        
+                        @media (max-width: 767px) {
+                            display: none;   
+                        }
                     }
                 }
             }
@@ -413,12 +431,20 @@ section {
                 margin-top: 3em;
                 
                 @media(max-width: 767px) {
-                    @include span(12 of 12);
+                    display: none;
                 }
             }
             
             &.client-logo {
                 width: 60%;
+                
+                @media(max-width: 767px) {
+                    width: 30%;
+                }
+                
+                @media(max-width: 480px) {
+                    width: 55%;
+                }
             }
         }
         

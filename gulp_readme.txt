@@ -4,7 +4,7 @@
 
 2. then run this to install modules:
 
-npm install gulp-ruby-sass gulp-autoprefixer gulp-compass gulp-minify-css gulp-jshint gulp-concat gulp-uglify gulp-imagemin gulp-notify gulp-rename gulp-livereload gulp-cache del --save-dev
+npm install gulp-ruby-sass gulp-autoprefixer gulp-compass gulp-minify-css gulp-jshint gulp-concat gulp-uglify gulp-imagemin gulp-notify gulp-rename gulp-cache gulp-webserver --save-dev
 
 That should do it!
 
