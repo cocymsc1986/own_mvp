@@ -174,9 +174,15 @@ $(document).ready(function() {
     var softwareAnim = TweenMax.from(".software img", 1, {opacity: 0, paused: true});
     // end
     
+    // social icons
+    var socialAnim = TweenMax.from(".social", 1, {opacity: 0, y: 50, paused: true});
+    // end
+    
     // scroll handler
     $(window).scroll(function() {
+        // calculate scrollpoint and when to animate elements
         var scrollPos = $(document).scrollTop();
+        var animStartPos = scrollPos + (($(window).height() / 3) * 2);
         
         if(scrollPos > 0) {
             if($('nav').hasClass('scrolled')) {
@@ -188,8 +194,16 @@ $(document).ready(function() {
             $('nav').removeClass('scrolled'); 
         }
         
+        // global -- social icons at bottom of each page
+        if($('section.contact').offset().top < animStartPos) {
+            socialAnim.paused(false);
+        }
+        
+        // end
+        
+        
+        // home page animations
         if($('body').hasClass('home')) {
-            var animStartPos = scrollPos + (($(window).height() / 3) * 2);
 
             if(scrollPos > 5) {
                 if($('.social-menu-container').hasClass('hide')) {
@@ -223,7 +237,7 @@ $(document).ready(function() {
     })
     // end
 
-    // portfolio page animation
+    // portfolio page animations
     
     // portfolio load
     TweenMax.from(".portfolio-intro h2", 1, {opacity: 0, y: 50, delay: 0.25});
@@ -278,7 +292,7 @@ $(document).ready(function() {
     })
     // end
     
-    // about
+    // about page animations
     
     TweenMax.from(".about h2", 1, {opacity: 0, delay: 0.5});
     TweenMax.from(".about p", 1, {opacity: 0, delay: 1});
@@ -286,9 +300,11 @@ $(document).ready(function() {
     
     // end
     
-    // contact
+    // contact page animations
     
     TweenMax.from(".contact h2", 1, {opacity: 0, delay: 0.25});
     TweenMax.staggerFrom(".contact li", 0.5, {opacity: 0, y: -200, delay: 0.5}, 0.2);
+    
+    // end
     
 })

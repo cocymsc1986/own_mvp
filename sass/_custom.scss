@@ -38,6 +38,7 @@ section {
     
     &.image {
         height: 60vh;
+        background-size: cover;
         
         @media(max-width: 767px) {
             height: 35vh;
@@ -209,6 +210,11 @@ section {
                 margin: 2em auto;
                 background-color: $primary;
                 cursor: pointer;
+                
+                @media(max-width: 767px) {
+                    width: 175px;
+                    height: 175px;
+                }
 
                 &.barnet {
                     background-image: url('../assets/images/barnet_thumb.png');
@@ -320,7 +326,7 @@ section {
             }
         }
 
-        button {
+        .primary {
             margin-bottom: 2em;
             cursor: pointer;
             transition: all 0.2s ease-out;
@@ -334,6 +340,7 @@ section {
             
             @media(max-width: 767px) {
                 margin: 2em 0 1em;
+                font-size: 0.8em;
             }
 
             i {
@@ -421,6 +428,16 @@ section {
             h2 {
                 margin-top: 0;
                 margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            
+            small {
+                display: inline-block;
+                margin-bottom: 1em;   
+            }
+            
+            p {
+                margin-bottom: 1em;   
             }
         }
         
@@ -459,6 +476,10 @@ section {
                 font-size: 1.25em;
                 color: $white;
             }
+            
+            p {
+                color: $white;
+            }
         }
         
         &:nth-child(even) {
@@ -478,7 +499,14 @@ section {
 
 .about {
     .about-intro {
-        padding-top: 4em;   
+        padding-top: 4em;
+        
+        .intro {
+            &:last-child {
+                margin-bottom: 0;
+                padding-bottom: 1.5em;
+            }   
+        }
     }
     
     section {
@@ -493,9 +521,32 @@ section {
     
     p {
         font-size: 1.4em;
-        margin: 0 auto 1.5em;
+        margin: auto 1.5em;
         max-width: 800px;
         text-align: left;
+        
+        @media(max-width: 480px) {
+            text-align: center;
+            margin: 0;
+        }
+    }
+}
+
+body.contact section.contact {
+    height: auto;
+    max-height: none;
+    
+    p {
+       margin-bottom: 2em; 
+    }   
+    
+    form {
+        width: 300px;
+        margin: 0 auto;
+        
+        @media(max-width: 480px) {
+            width: 275px;   
+        }
     }
 }
 

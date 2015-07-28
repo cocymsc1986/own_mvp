@@ -48,10 +48,11 @@
         <main class="wrapper">
             <section class="contact">
                 <div class="section-inner">
-                    <article class="">
+                    <article class="contact-form">
                         <h2>Get in touch...</h2>
-                        
-                        <form>
+                        <form name="contact_me_form" target="_self" action="post">
+                            <p>Send me a message and I'll respond as soon as I can!</p>
+                            
                             <div class="group">      
                                 <input type="text" required>
                                 <span class="highlight"></span>
@@ -65,17 +66,28 @@
                                 <span class="bar"></span>
                                 <label>Email</label>
                             </div>
+                            
+                            <div class="group">      
+                                <textarea required></textarea>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>Message</label>
+                            </div>
+                            
+                            <button class="primary" type="submit">
+                                Send!
+                            </button>
                         </form>
                     </article>
 
                     <div class="social">
-                        <div class="instagram-lg">
+                        <div class="instagram-lg social-icon">
                             <a href="https://instagram.com/cocymsc1986"><i class="flaticon-instagram19"></i></a>
                         </div>
-                        <div class="twitter-lg">
+                        <div class="twitter-lg social-icon">
                             <a href="https://twitter.com/likemike1986"><i class="flaticon-twitter"></i></a>
                         </div>
-                        <div class="linkedin-lg">
+                        <div class="linkedin-lg social-icon">
                             <a href="https://uk.linkedin.com/pub/michael-cockcroft/32/764/9aa"><i class="flaticon-linkedin"></i></a>
                         </div>
                     </div>

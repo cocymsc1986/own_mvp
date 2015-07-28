@@ -67,7 +67,8 @@ bold {
   font-weight: bold;
 }
 
-button.primary {
+button.primary, a.primary {
+  display: inline-block;
   font-family: "Droid Sans", "Roboto", "Source Sans Pro";
   background: #00BCD4;
   padding: 1em;
@@ -78,7 +79,7 @@ button.primary {
   box-shadow: 2px 2px 2px #d7d4de;
   cursor: pointer;
 }
-button.primary:hover {
+button.primary:hover, a.primary:hover {
   background: #00d3ee;
   box-shadow: 0px 0px 8px 5px #d7d4de;
   transition: all 0.2s ease-out;
@@ -121,6 +122,12 @@ body {
   font-size: 20px;
   font-style: normal;
   margin-left: 20px;
+}
+@media (max-width: 480px) {
+  [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    margin-left: 5px;
+  }
 }
 
 .flaticon-check52:before {
@@ -181,7 +188,7 @@ body {
   margin-bottom: 45px;
 }
 
-input {
+input, textarea {
   font-size: 18px;
   padding: 10px 10px 10px 5px;
   display: block;
@@ -190,8 +197,13 @@ input {
   border-bottom: 1px solid #757575;
   background: none;
 }
+@media (max-width: 480px) {
+  input, textarea {
+    width: 250px;
+  }
+}
 
-input:focus {
+input:focus, textarea:focus {
   outline: none;
 }
 
@@ -210,7 +222,8 @@ label {
 }
 
 /* active state */
-input:focus ~ label, input:valid ~ label {
+input:focus ~ label, input:valid ~ label,
+textarea:focus ~ label, textarea:valid ~ label {
   top: -20px;
   font-size: 14px;
   color: #5264AE;
@@ -244,7 +257,8 @@ input:focus ~ label, input:valid ~ label {
 }
 
 /* active state */
-input:focus ~ .bar:before, input:focus ~ .bar:after {
+input:focus ~ .bar:before, input:focus ~ .bar:after,
+textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
   width: 50%;
 }
 
@@ -260,7 +274,8 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 }
 
 /* active state */
-input:focus ~ .highlight {
+input:focus ~ .highlight,
+textarea:focus ~ .highlight {
   -webkit-animation: inputHighlighter 0.3s ease;
   -moz-animation: inputHighlighter 0.3s ease;
   animation: inputHighlighter 0.3s ease;
@@ -592,6 +607,7 @@ section h2 {
 }
 section.image {
   height: 60vh;
+  background-size: cover;
 }
 @media (max-width: 767px) {
   section.image {
@@ -739,6 +755,12 @@ section.four .work-container .work-example {
   background-color: #2B194D;
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  section.four .work-container .work-example {
+    width: 175px;
+    height: 175px;
+  }
+}
 section.four .work-container .work-example.barnet {
   background-image: url("../assets/images/barnet_thumb.png");
 }
@@ -835,7 +857,7 @@ section.contact .social div a:hover i:before {
   color: #00BCD4;
   transition: color 0.1s linear;
 }
-section.contact button {
+section.contact .primary {
   margin-bottom: 2em;
   cursor: pointer;
   transition: all 0.2s ease-out;
@@ -849,6 +871,7 @@ section.contact .email, section.contact .telephone, section.contact .twitter {
 @media (max-width: 767px) {
   section.contact .email, section.contact .telephone, section.contact .twitter {
     margin: 2em 0 1em;
+    font-size: 0.8em;
   }
 }
 section.contact .email i, section.contact .telephone i, section.contact .twitter i {
@@ -932,6 +955,14 @@ section.contact .email span, section.contact .telephone span, section.contact .t
 .portfolio section:not(.contact) .work-description h2 {
   margin-top: 0;
   margin-bottom: 0;
+  padding-bottom: 0;
+}
+.portfolio section:not(.contact) .work-description small {
+  display: inline-block;
+  margin-bottom: 1em;
+}
+.portfolio section:not(.contact) .work-description p {
+  margin-bottom: 1em;
 }
 .portfolio section:not(.contact) img.portfolio-example {
   width: 57.62712%;
@@ -968,6 +999,9 @@ section.contact .email span, section.contact .telephone span, section.contact .t
   font-size: 1.25em;
   color: #FFFFFF;
 }
+.portfolio section:not(.contact):nth-child(odd) p {
+  color: #FFFFFF;
+}
 .portfolio section:not(.contact):nth-child(even) {
   background: #F2F1F4;
 }
@@ -982,6 +1016,10 @@ section.contact .email span, section.contact .telephone span, section.contact .t
 .about .about-intro {
   padding-top: 4em;
 }
+.about .about-intro .intro:last-child {
+  margin-bottom: 0;
+  padding-bottom: 1.5em;
+}
 .about section h2 {
   padding: 1em 0;
 }
@@ -990,9 +1028,32 @@ section.contact .email span, section.contact .telephone span, section.contact .t
 }
 .about p {
   font-size: 1.4em;
-  margin: 0 auto 1.5em;
+  margin: auto 1.5em;
   max-width: 800px;
   text-align: left;
+}
+@media (max-width: 480px) {
+  .about p {
+    text-align: center;
+    margin: 0;
+  }
+}
+
+body.contact section.contact {
+  height: auto;
+  max-height: none;
+}
+body.contact section.contact p {
+  margin-bottom: 2em;
+}
+body.contact section.contact form {
+  width: 300px;
+  margin: 0 auto;
+}
+@media (max-width: 480px) {
+  body.contact section.contact form {
+    width: 275px;
+  }
 }
 
 .filter {

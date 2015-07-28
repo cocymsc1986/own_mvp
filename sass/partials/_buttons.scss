@@ -1,4 +1,5 @@
-button.primary {
+button.primary, a.primary {
+    display: inline-block;
     font-family: $primary-font;
     background: $accent;
     padding: 1em;
