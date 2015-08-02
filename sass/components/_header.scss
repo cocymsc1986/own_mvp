@@ -1,0 +1,49 @@
+.profile-pic {
+    display: block;
+    position: fixed;
+    top: -70px;
+    left: 10px;
+    width: 60px;
+    margin: 0;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    z-index: 99999;
+    
+    @media (max-width: 480px) {
+        display: none !important;   
+    }
+}   
+
+.profile-min .profile-pic {
+    animation: show-proffy-pic 0.2s ease-out forwards;   
+}
+
+
+.portfolio .scrolled + .profile-pic, 
+.about .scrolled + .profile-pic, 
+.contact .scrolled + .profile-pic {
+    animation: show-proffy-pic 0.2s ease-out forwards;  
+}
+
+@keyframes show-proffy-pic {
+    0% {
+        top: -70px;
+    }
+    
+    100% {
+        top: 10px;   
+    }
+}
+
+.remove-profile-min .profile-pic {
+    animation: remove-proffy-pic 0.2s ease-out forwards; 
+}
+
+@keyframes remove-proffy-pic {
+    0% {
+        top: 10px;
+    }
+    
+    100% {
+        top: -70px;   
+    }
+}

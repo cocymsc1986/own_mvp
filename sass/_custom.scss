@@ -18,9 +18,9 @@ main {
 }
 
 section {
-    height: 100vh;
-    max-height: 1000px;
-    min-height: 700px;
+    min-height: 100vh;
+    // max-height: 1000px;
+    // min-height: 700px;
     background-attachment: fixed;
     background-size: 100%;
     text-align: center;
@@ -49,9 +49,17 @@ section {
         background-image: url();
         text-align: center;
         
-        .welcome-text-container {
-            color: $primary;
-            z-index: 1;
+        .welcome-container {
+            height: 100%;
+            
+            .welcome-text-container {
+                width: 100%;
+                // position: absolute;
+                // bottom: 5%;
+                margin-bottom: 3%;
+                color: $primary;
+                z-index: 1;
+            }
         }
         
         .me {
@@ -369,12 +377,18 @@ section {
         text-align: left;
         padding: 4em 2em 1em;
         max-height: 800px;
+        min-height: 700px;
+        height: 100vh;
 
         @media(max-width: 767px) {
             text-align: center;
             max-height: none;
             height: auto;
             padding: 2em 2em 1em;
+        }
+        
+        @media(max-width: 480px) {
+            min-height: 770px;
         }
         
         &.portfolio-intro {
@@ -521,12 +535,13 @@ section {
     
     p {
         font-size: 1.4em;
-        margin: auto 1.5em;
+        margin: 1.5em auto;
         max-width: 800px;
         text-align: left;
         
         @media(max-width: 480px) {
-            text-align: center;
+            text-align: left;
+            font-size: 1.2em;
             margin: 0;
         }
     }
@@ -535,6 +550,7 @@ section {
 body.contact section.contact {
     height: auto;
     max-height: none;
+    padding-top: 5em;
     
     p {
        margin-bottom: 2em; 
@@ -555,4 +571,9 @@ body.contact section.contact {
     position: absolute;
     left: -999999px;
     top: -999999px;
+}
+
+// unknown error hack
+.about .contact h2 {
+    opacity: 1 !important;   
 }

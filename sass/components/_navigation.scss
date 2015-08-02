@@ -17,11 +17,20 @@ nav {
         &:hover {
             opacity: 1;
         }
+        
+        ul {
+            width: 250px;
+            margin-right: 15px;
+            transition: all 0.2s ease-out;
+        }
     }
     
     ul {
         margin: 0;
         padding-top: 5px;
+        width: 100%;
+        float: right;
+        transition: all 0.2s ease-out;
         
         li {
             @include span(3 of 12);

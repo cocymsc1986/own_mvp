@@ -18,6 +18,10 @@ a:visited {
   color: inherit;
 }
 
+html {
+  background: #F2F1F4;
+}
+
 body {
   font-family: "Droid Sans", "Roboto", "Source Sans Pro";
   font-size: 16px;
@@ -96,6 +100,7 @@ body {
 
 .section-inner {
   max-width: 1280px;
+  height: 100%;
   margin: 0 auto;
 }
 @media (max-width: 767px) {
@@ -235,6 +240,11 @@ textarea:focus ~ label, textarea:valid ~ label {
   display: block;
   width: 300px;
 }
+@media (max-width: 480px) {
+  .bar {
+    width: 250px;
+  }
+}
 
 .bar:before, .bar:after {
   content: '';
@@ -253,13 +263,13 @@ textarea:focus ~ label, textarea:valid ~ label {
 }
 
 .bar:after {
-  right: 50%;
+  right: 45%;
 }
 
 /* active state */
 input:focus ~ .bar:before, input:focus ~ .bar:after,
 textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
-  width: 50%;
+  width: 55%;
 }
 
 /* HIGHLIGHTER ================================== */
@@ -483,6 +493,52 @@ textarea:focus ~ .highlight {
   color: #fff;
 }
 
+.profile-pic {
+  display: block;
+  position: fixed;
+  top: -70px;
+  left: 10px;
+  width: 60px;
+  margin: 0;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  z-index: 99999;
+}
+@media (max-width: 480px) {
+  .profile-pic {
+    display: none !important;
+  }
+}
+
+.profile-min .profile-pic {
+  animation: show-proffy-pic 0.2s ease-out forwards;
+}
+
+.portfolio .scrolled + .profile-pic,
+.about .scrolled + .profile-pic,
+.contact .scrolled + .profile-pic {
+  animation: show-proffy-pic 0.2s ease-out forwards;
+}
+
+@keyframes show-proffy-pic {
+  0% {
+    top: -70px;
+  }
+  100% {
+    top: 10px;
+  }
+}
+.remove-profile-min .profile-pic {
+  animation: remove-proffy-pic 0.2s ease-out forwards;
+}
+
+@keyframes remove-proffy-pic {
+  0% {
+    top: 10px;
+  }
+  100% {
+    top: -70px;
+  }
+}
 nav {
   position: fixed;
   width: 100%;
@@ -501,9 +557,17 @@ nav.scrolled {
 nav.scrolled:hover {
   opacity: 1;
 }
+nav.scrolled ul {
+  width: 250px;
+  margin-right: 15px;
+  transition: all 0.2s ease-out;
+}
 nav ul {
   margin: 0;
   padding-top: 5px;
+  width: 100%;
+  float: right;
+  transition: all 0.2s ease-out;
 }
 nav ul li {
   width: 23.72881%;
@@ -587,9 +651,7 @@ main {
 }
 
 section {
-  height: 100vh;
-  max-height: 1000px;
-  min-height: 700px;
+  min-height: 100vh;
   background-attachment: fixed;
   background-size: 100%;
   text-align: center;
@@ -618,7 +680,12 @@ section.one {
   background-image: url();
   text-align: center;
 }
-section.one .welcome-text-container {
+section.one .welcome-container {
+  height: 100%;
+}
+section.one .welcome-container .welcome-text-container {
+  width: 100%;
+  margin-bottom: 3%;
   color: #2B194D;
   z-index: 1;
 }
@@ -894,6 +961,8 @@ section.contact .email span, section.contact .telephone span, section.contact .t
   text-align: left;
   padding: 4em 2em 1em;
   max-height: 800px;
+  min-height: 700px;
+  height: 100vh;
 }
 @media (max-width: 767px) {
   .portfolio section:not(.contact) {
@@ -901,6 +970,11 @@ section.contact .email span, section.contact .telephone span, section.contact .t
     max-height: none;
     height: auto;
     padding: 2em 2em 1em;
+  }
+}
+@media (max-width: 480px) {
+  .portfolio section:not(.contact) {
+    min-height: 770px;
   }
 }
 .portfolio section:not(.contact).portfolio-intro {
@@ -1028,13 +1102,14 @@ section.contact .email span, section.contact .telephone span, section.contact .t
 }
 .about p {
   font-size: 1.4em;
-  margin: auto 1.5em;
+  margin: 1.5em auto;
   max-width: 800px;
   text-align: left;
 }
 @media (max-width: 480px) {
   .about p {
-    text-align: center;
+    text-align: left;
+    font-size: 1.2em;
     margin: 0;
   }
 }
@@ -1042,6 +1117,7 @@ section.contact .email span, section.contact .telephone span, section.contact .t
 body.contact section.contact {
   height: auto;
   max-height: none;
+  padding-top: 5em;
 }
 body.contact section.contact p {
   margin-bottom: 2em;
@@ -1060,4 +1136,8 @@ body.contact section.contact form {
   position: absolute;
   left: -999999px;
   top: -999999px;
+}
+
+.about .contact h2 {
+  opacity: 1 !important;
 }
