@@ -33,7 +33,6 @@
         // Send the email.
         if (mail($recipient, $subject, $email_content, $email_headers)) {
             // Set a 200 (okay) response code.
-            mail($recipient, $subject, $email_content, $email_headers)
             http_response_code(200);
             echo "Thank You! Your message has been sent.";
         } else {
