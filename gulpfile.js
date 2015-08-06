@@ -19,8 +19,19 @@ gulp.task('compass', function() {
       css: 'css',
       sass: 'sass'
     }))
-    .pipe(gulp.dest('app/assets/temp'))
-    .pipe(autoprefixer('last 2 version'));
+    .pipe(gulp.dest('app/assets/temp'));
+});
+
+gulp.task('compress-styles',function() {
+   gulp.src('css/screen.css')
+   .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(minifycss())
+    .pipe(gulp.dest('css'))
+    .pipe(notify({ message: 'compress-styles task complete' }));
 });
 
 gulp.task('webserver', function() {
@@ -44,14 +55,14 @@ gulp.task('webserver', function() {
 });*/
 
 gulp.task('scripts', function() {
-  return gulp.src('js/**/*.js')
+  return gulp.src(['js/vendor/**/*.js','js/init/*.js','js/*.js'])
 //    .pipe(jshint('node_modules/gulp-jshint/.jshintrc'))
 //    .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('js/compressed'))
+    .pipe(gulp.dest('js-min/compressed'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
-    .pipe(gulp.dest('js/compressed'))
+    .pipe(gulp.dest('js-min/compressed'))
     .pipe(notify({ message: 'Scripts task complete' }));
 });
 
@@ -67,7 +78,7 @@ gulp.task('default', function() {
 });
 
 gulp.task('watchstyles', function() {
-    gulp.watch('sass/**/*.scss', ['compass'] );
+    gulp.watch('sass/**/*.scss', ['compass','compress-styles'] );
 })
 
 gulp.task('watchscripts', function() {

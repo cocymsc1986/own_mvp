@@ -11,7 +11,7 @@
 }
 
 
-@-webkit-keyframes loader {
+@keyframes loader {
     to { 
         stroke-dashoffset: 0;
         transform: rotate(360deg);
@@ -58,22 +58,22 @@
 }
 
 // typing effect... Thanks to Lea Verou http://lea.verou.me/2011/09/pure-css3-typing-animation-with-steps/
-@-webkit-keyframes typing {
+@keyframes typing {
     from { width: 100% }
     to { width: 0 }
 }
 
-@-webkit-keyframes blink-caret {
+@keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: black }
 }
 
-@-moz-keyframes typing {
+@keyframes typing {
     from { width: 100% }
     to { width: 0 }
 }
 
-@-moz-keyframes blink-caret {
+@keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: black }
 }
@@ -89,10 +89,10 @@
     }
 }
 
-@-webkit-keyframes draw {
+@keyframes draw {
     to { stroke-dashoffset: 0 }
 }
 
-@-moz-keyframes draw {
+@keyframes draw {
     to { stroke-dashoffset: 0 }
 }

@@ -110,3 +110,22 @@ textarea:focus ~ .highlight{
     from { background:#5264AE; }
   to    { width:0; background:transparent; }
 }
+
+.form-message-container {
+    margin-top: -1em;
+    margin-bottom: 2em;
+    max-height: 0;
+    transition: all 0.2s ease-out;
+    
+    &.error {
+        color: crimson;
+        max-height: 50px;
+        transition: all 0.2s ease-out;
+    }
+    
+    &.success {
+        color: $accent;
+        max-height: 50px;
+        transition: all 0.2s ease-out;
+    }
+}

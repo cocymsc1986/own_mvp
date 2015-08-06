@@ -5,7 +5,7 @@
     left: 10px;
     width: 60px;
     margin: 0;
-    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
     z-index: 99999;
     
     @media (max-width: 480px) {
