@@ -18,13 +18,13 @@ a:visited {
 }
 
 html {
-  background: #F2F1F4;
+  background: #f2f1f4;
 }
 
 body {
   font-family: "Droid Sans", "Roboto", "Source Sans Pro";
   font-size: 16px;
-  color: #2B194D;
+  color: #2b194d;
 }
 
 h1, h2, h3, h4, h5 {
@@ -73,10 +73,10 @@ bold {
 button.primary, a.primary {
   display: inline-block;
   font-family: "Droid Sans", "Roboto", "Source Sans Pro";
-  background: #00BCD4;
+  background: #00bcd4;
   padding: 1em;
   border: none;
-  color: #FFFFFF;
+  color: white;
   font-size: 1.25em;
   border-radius: 3px;
   box-shadow: 2px 2px 2px #d7d4de;
@@ -295,6 +295,7 @@ textarea:focus ~ .highlight {
   from {
     background: #5264AE;
   }
+
   to {
     width: 0;
     background: transparent;
@@ -304,6 +305,7 @@ textarea:focus ~ .highlight {
   from {
     background: #5264AE;
   }
+
   to {
     width: 0;
     background: transparent;
@@ -313,6 +315,7 @@ textarea:focus ~ .highlight {
   from {
     background: #5264AE;
   }
+
   to {
     width: 0;
     background: transparent;
@@ -330,7 +333,7 @@ textarea:focus ~ .highlight {
   transition: all 0.2s ease-out;
 }
 .form-message-container.success {
-  color: #00BCD4;
+  color: #00bcd4;
   max-height: 50px;
   transition: all 0.2s ease-out;
 }
@@ -374,6 +377,7 @@ textarea:focus ~ .highlight {
   from {
     width: 100%;
   }
+
   to {
     width: 0;
   }
@@ -382,6 +386,7 @@ textarea:focus ~ .highlight {
   from, to {
     border-color: transparent;
   }
+
   50% {
     border-color: black;
   }
@@ -390,6 +395,7 @@ textarea:focus ~ .highlight {
   from {
     width: 100%;
   }
+
   to {
     width: 0;
   }
@@ -398,6 +404,7 @@ textarea:focus ~ .highlight {
   from, to {
     border-color: transparent;
   }
+
   50% {
     border-color: black;
   }
@@ -410,11 +417,6 @@ textarea:focus ~ .highlight {
   transition: opacity 1.5s linear;
 }
 
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
 @keyframes draw {
   to {
     stroke-dashoffset: 0;
@@ -440,7 +442,7 @@ textarea:focus ~ .highlight {
 .menu-toggle-button,
 .menu-item-bounce,
 .menu-item-button {
-  background: #00BCD4;
+  background: #00bcd4;
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -502,7 +504,7 @@ textarea:focus ~ .highlight {
   position: absolute;
   top: 0;
   left: 0;
-  color: #00BCD4;
+  color: #00bcd4;
 }
 
 .menu-item-button:hover {
@@ -539,6 +541,7 @@ textarea:focus ~ .highlight {
   0% {
     top: -70px;
   }
+
   100% {
     top: 10px;
   }
@@ -551,6 +554,7 @@ textarea:focus ~ .highlight {
   0% {
     top: 10px;
   }
+
   100% {
     top: -70px;
   }
@@ -560,7 +564,7 @@ nav {
   width: 100%;
   min-height: 35px;
   padding: 0.5em;
-  background: #F2F1F4;
+  background: #f2f1f4;
   font-family: "open sans";
   z-index: 999;
   transition: all 0.2s ease-out;
@@ -592,7 +596,7 @@ nav ul li {
   display: inline;
   text-align: center;
   font-size: 1em;
-  color: #2B194D;
+  color: #2b194d;
 }
 @media (max-width: 767px) {
   nav ul li {
@@ -663,7 +667,7 @@ body.js * {
 }
 
 main {
-  border-bottom: 5px solid #2B194D;
+  border-bottom: 5px solid #2b194d;
 }
 
 section {
@@ -672,7 +676,7 @@ section {
   background-attachment: fixed;
   background-size: 100%;
   text-align: center;
-  background-color: #F2F1F4;
+  background-color: #f2f1f4;
 }
 @media (min-width: 767px) {
   section {
@@ -710,7 +714,7 @@ section.one .welcome-container {
 section.one .welcome-container .welcome-text-container {
   width: 100%;
   margin-bottom: 5%;
-  color: #2B194D;
+  color: #2b194d;
   z-index: 1;
 }
 section.one .me {
@@ -732,10 +736,10 @@ section.one .me {
   }
 }
 section.two {
-  background: #2B194D;
+  background: #2b194d;
   height: auto;
   padding: 2em 0;
-  color: #FFFFFF;
+  color: white;
   overflow: hidden;
 }
 section.two .skill {
@@ -763,8 +767,8 @@ section.two .skill h3 i.more {
   border-radius: 16px;
   height: 32px;
   width: 32px;
-  background: #00BCD4;
-  color: #FFFFFF;
+  background: #00bcd4;
+  color: white;
   vertical-align: middle;
   margin: 0.25em auto;
   box-shadow: 2px 2px 5px #060410;
@@ -781,7 +785,7 @@ section.two .skill h3 i.more:before {
 section.two .skill h3 i.more:hover {
   transition: all 0.2s ease-out;
   background: #08e3ff;
-  box-shadow: 3px 3px 3px #160d27;
+  box-shadow: 3px 3px 3px #160c27;
 }
 section.two .skill h3 i.more span {
   height: 0;
@@ -820,8 +824,8 @@ section.three.image {
 section.four {
   height: auto;
   padding: 2em 0 5em;
-  color: #2B194D;
-  background: #F2F1F4;
+  color: #2b194d;
+  background: #f2f1f4;
 }
 @media (min-width: 960px) {
   section.four h2 {
@@ -852,9 +856,9 @@ section.four .work-container .work-example {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 6px solid #2B194D;
+  border: 6px solid #2b194d;
   margin: 2em auto;
-  background-color: #2B194D;
+  background-color: #2b194d;
   cursor: pointer;
 }
 @media (max-width: 767px) {
@@ -888,7 +892,7 @@ section.four .work-container .work-example .client-logo {
   transition: opacity 0.5s linear;
 }
 section.four .work-container .work-example:hover {
-  background: #2B194D;
+  background: #2b194d;
 }
 section.four .work-container .work-example:hover .client-logo {
   opacity: 1;
@@ -896,9 +900,9 @@ section.four .work-container .work-example:hover .client-logo {
 }
 section.five {
   height: auto;
-  color: #FFFFFF;
+  color: white;
   padding: 2em 0;
-  background: #2B194D;
+  background: #2b194d;
 }
 @media (min-width: 960px) {
   section.five h2 {
@@ -924,7 +928,7 @@ section.five img {
 }
 section.contact {
   padding: 2em 2em 0;
-  color: #2B194D;
+  color: #2b194d;
 }
 @media (max-width: 767px) {
   section.contact {
@@ -952,7 +956,7 @@ section.contact .social div:last-child {
 }
 section.contact .social div i:before {
   font-size: 10em;
-  color: #2B194D;
+  color: #2b194d;
   transition: all 0.1s linear;
 }
 @media (max-width: 767px) {
@@ -966,7 +970,7 @@ section.contact .social div i:before {
   }
 }
 section.contact .social div a:hover i:before {
-  color: #00BCD4;
+  color: #00bcd4;
   transition: color 0.1s linear;
 }
 section.contact .primary {
@@ -977,7 +981,7 @@ section.contact .primary {
 section.contact .email, section.contact .telephone, section.contact .twitter {
   display: inline-block;
   margin: 3em 1em 1em;
-  color: #2B194D;
+  color: #2b194d;
   margin-top: 3em;
 }
 @media (max-width: 767px) {
@@ -997,9 +1001,9 @@ section.contact .email span, section.contact .telephone span, section.contact .t
 }
 
 .footer {
-  color: #FFFFFF;
+  color: white;
   padding: 1em;
-  background: #2B194D;
+  background: #2b194d;
 }
 
 .portfolio section:not(.contact) {
@@ -1054,7 +1058,7 @@ section.contact .email span, section.contact .telephone span, section.contact .t
   width: 100%;
 }
 .portfolio section:not(.contact).portfolio-intro p {
-  color: #FFFFFF;
+  color: white;
   font-size: 1.4em;
   margin-bottom: 1em;
 }
@@ -1084,7 +1088,7 @@ section.contact .email span, section.contact .telephone span, section.contact .t
   margin-bottom: 1em;
 }
 .portfolio section:not(.contact) .work-description a {
-  color: #00BCD4;
+  color: #00bcd4;
   text-decoration: underline;
   transition: all 0.2s linear;
 }
@@ -1119,27 +1123,27 @@ section.contact .email span, section.contact .telephone span, section.contact .t
   }
 }
 .portfolio section:not(.contact):nth-child(odd) {
-  background: #2B194D;
+  background: #2b194d;
 }
 .portfolio section:not(.contact):nth-child(odd) h2 {
-  color: #FFFFFF;
+  color: white;
 }
 .portfolio section:not(.contact):nth-child(odd) small {
   font-size: 1.25em;
-  color: #FFFFFF;
+  color: white;
 }
 .portfolio section:not(.contact):nth-child(odd) p {
-  color: #FFFFFF;
+  color: white;
 }
 .portfolio section:not(.contact):nth-child(even) {
-  background: #F2F1F4;
+  background: #f2f1f4;
 }
 .portfolio section:not(.contact):nth-child(even) h2 {
-  color: #2B194D;
+  color: #2b194d;
 }
 .portfolio section:not(.contact):nth-child(even) small {
   font-size: 1.25em;
-  color: #2B194D;
+  color: #2b194d;
 }
 
 .about .about-intro {
