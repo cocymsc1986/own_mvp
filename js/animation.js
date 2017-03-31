@@ -215,8 +215,8 @@ $(document).ready(function() {
         reed: TweenMax.staggerFrom(".reed-work-animation", 0.5, {opacity: 0, y: 100, paused: true}, 0.2),
         // end
 
-        // alessios
-        alessios: TweenMax.staggerFrom(".alessios-work-animation", 0.5, {opacity: 0, y: 100, paused: true}, 0.2),
+        // sky
+        sky: TweenMax.staggerFrom(".sky-work-animation", 0.5, {opacity: 0, y: 100, paused: true}, 0.2),
         // end
 
         // rac

@@ -116,19 +116,19 @@ section {
             
             &:first-child {
                 h3 i.more:before {
-                    
-                }   margin-left: 7px;
+                    margin-left: 7px;
+                }
             }
             
             h3 {
                 i.more {
+                    position: relative;
                     display: block;
                     border-radius: 16px;
                     height: 32px;
                     width: 32px;
-                    background: $accent;
-                    color: $white;
-                    vertical-align: middle;
+                    background: #aceef7;
+                    color: $primary;
                     margin: 0.25em auto;
                     box-shadow: 2px 2px 5px #060410;
                     line-height: 18px;
@@ -136,34 +136,34 @@ section {
                     transition: all 0.2s ease-out;
                     
                     &:before {
+                        position: absolute;
                         font-size: 16px;
-                        margin-left: 8px;  
+                        margin-left: 0px;  
+                        left: 50%;
+                        transform: translateX(-50%);
+                        top: 7px;
                         opacity: 1;
                         transition: all 0.75s ease-out;
                     }
                     
                     &:hover {
                         transition: all 0.2s ease-out;
-                        background: lighten($accent, 10%);
                         box-shadow: 3px 3px 3px darken($primary, 10%);
                     }
                     
                     span {
                         height: 0;
-                        font-size: 0.75em;
+                        font-size: 0.65em;
                         font-weight: normal;
                         font-style: normal;
-                        line-height: 26px;
-                        padding: 0.75em;
+                        line-height: 30px;
+                        padding: 0.65em;
                         text-align: left;
-                        
                         opacity: 0;
                         transition: all 0s linear;
                     }
                     
                     &.open {
-//                        transform: scale(10);
-//                        border-radius: 1px;
                         height: 370px;
                         width: 300px;
                         line-height: 30px;
@@ -180,8 +180,8 @@ section {
                         }
                         
                         span {
-                            display: inline-block;
-                            margin-top: -15px;
+                            display: block;
+                            padding: 1rem;
                             opacity: 1;
                             transition: all 0.7s ease-in;
                         }
@@ -249,13 +249,13 @@ section {
                 &.tesco {
                     background-image: url('../assets/images/tesco_thumb.png');
                 }
-
+                
                 &.reed {
                     background-image: url('../assets/images/reed_salary_thumb.png');
                 }
 
-                &.alessio {
-                    background-image: url('../assets/images/alessios_thumb.png');
+                &.sky {
+                    background-image: url('../assets/images/sky_thumb.png');
                 }
 
                 &.rac {
