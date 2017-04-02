@@ -657,6 +657,13 @@ body.js * {
   margin: 200px auto 0;
 }
 
+.underline {
+  text-decoration: underline;
+}
+.underline:hover {
+  text-decoration: none;
+}
+
 main {
   border-bottom: 5px solid #2B194D;
 }
@@ -783,10 +790,10 @@ section.two .skill h3 i.more:hover {
 }
 section.two .skill h3 i.more span {
   height: 0;
-  font-size: 0.65em;
+  font-size: 0.6em;
   font-weight: normal;
   font-style: normal;
-  line-height: 30px;
+  line-height: 28px;
   padding: 0.65em;
   text-align: left;
   opacity: 0;

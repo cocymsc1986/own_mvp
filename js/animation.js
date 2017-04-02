@@ -144,7 +144,7 @@ $(document).ready(function() {
     
     // page fade out
     
-    $('a').click(function(e) {
+    $('a:not([target="_blank"])').click(function(e) {
         e.preventDefault();
         link = this.href;
         
